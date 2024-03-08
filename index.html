@@ -1,21 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
-</head>
-<body>
-    <h1>Welcome to my github.io </h1>
-    <div>
-        <h3>My Github repositories: </h3>
-        <div>
-            <img src="assets\muzammil-13.io poster by bing - Copy (Custom).png" alt="Poster">
-        </div>
-        <ul>
-            <li>Django projects : <a href="https://github.com/muzammil-13/MidjangoRepo">Click here</a></li>
-            <li></li>
-        </ul>
+	<head>
+		<meta charset="utf-8">
+
+    <!-- 
+      TODO
+
+      Upload your Unemployable (or whatever photo you like) to the assets/images folder
+      and change the name of the image below to match the uploaded one
+
+      Change the title in the <title> tag to whatever you would like the title of your portfolio to be
+
+      This should be the same across all pages.
+     -->
+    <link rel="icon" href="./assets/images/muz-yellow_bg.png"/>
+		<title>Muzammil's Portfolio</title>
+    <meta name="description" content="A portfolio containing my github repositories (projects).">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/utilities.css">
+
+		<script defer src="./js/script.js"></script>
+	</head>
+	<body>
+    <!-- NAVBAR -->
+    <div class="navbar">
+      <a class="nav-title-link" href="./index.html">
+        <!-- TODO - Change the "Portfolio Title" to whatever you want displayed in the top left -->
+        <span class="nav-title">Muzammil's Portfolio</span>
+         <!-- TODO - Change the email after 'mailto:' to your email address for contact -->
+        <a class="button" href="mailto:pmmuzammilibrahim@gmail.com">
+          <span class="button-text">Contact Me</span>
+        </a>
+      </a>
     </div>
-</body>
+
+    <!-- MAIN PAGE CONTENT -->
+    <div id="main-content">
+
+      <!-- PORTFOLIO HEADER -->
+      <div id="portfolio-header">
+        <div id="portfolio-header-image-container">
+          <!-- 
+            TODO
+
+            - Change the img "src" attribute to point to the Unemployable image you uploaded (or whatever image).
+            - Change the number to point to your Unemployable & replace the OpenSea link with your own
+            - If you aren't using an Unemployable as your image, remove the entire "a" element
+          -->
+          <img src="./assets/images/muz-yellow_bg.png" class="portfolio-header-image" alt="Muzammil's yellow circled Dp comes here">
+          <!-- <a class="no-underline" target="_blank" href="https://opensea.io/assets/0xe0be388ab81c47b0f098d2030a1c9ef190691a8a/1311"> -->
+            <!-- <span class="image-caption">Unemployables #1358</span> -->
+          </a>
+        </div>
+
+          <!-- 
+            TODO
+
+            - Change the main-title to whatver you want
+            - Change the body-text after that to a quick introduction to what you do
+            - Edit the button text if you feel like it. It will link to the projects section below.
+          -->
+        <div id="portfolio-header-text-container">
+            <div class="header-text">
+              <span class="main-title">Hey, I'm Muzammil</span>
+              <div class="body-text">I’m a Jr. Python Developer seeking opportunities to contribute to a dynamic team environment, leverage my skills in development, and gain further experience in building real-world applications.</div>
+            </div>
+            <a class="button" id="my-work-link">
+              <span class="button-text">Check out my projects</span> 
+              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+            </a>
+        </div>
+      </div>
+
+      <!-- ABOUT SECTION -->
+      <!-- 
+        TODO
+
+        - Change the subheader-text to whatever header you want
+        - Add paragraphs using the <div class="body-text"></div> elements in the "about-section-content"
+      -->
+      <div id="about-section">
+        <span class="subheader-text">My Background / About Me</span>
+        <div class="about-section-content">          <div class="body-text">Hi, I’m a passionate Full Stack Developer based in Kottayam, Kerala. With a solid background in Computer Applications, I’ve had the privilege of working on exciting projects, including a to-do app, an e-commerce site for electronics and gadgets, an IMDb lite, a travel website, a web scraper, and even a bitcoin price prediction model using ML.
+
+            My superpowers? Well, I’m a Tech & Fitness enthusiast, a problem solver, and a lifelong learner. Whether it’s web application development, Linux administration, or digital marketing, I thrive on challenges and love turning ideas into reality.
+            
+            When I’m not immersed in code, you’ll find me at the gym doing CrossFit workouts, exploring mountains while hiking, taking a refreshing swim, or devouring articles on the latest tech trends. I believe in continuous growth, and I’m always eager to connect with fellow enthusiasts.
+            
+            Thanks for stopping by—I’d love to chat! Feel free to explore my portfolio and drop me a message. Let’s build something amazing together! 🚀🌟</div>
+        </div>
+        <!-- <div class="body-text">Highly motivated and Continues learning Python Developer eager to contribute to a team fostering innovation. Strong foundation in Development, Deployment, and Hardware troubleshooting fuels my passion for tackling new challenges and staying ahead of the curve. I'm always looking to expand my skillset and stay up-to-date with the latest technologies, making me a valuable asset to any team.</div> -->
+
+      </div>
+
+      <!-- PROJECTS / MY WORK SECTION -->
+      <div id="my-work-section">
+        <!-- TODO - Change the subheader-text to whatever you want the Projects section header to say -->
+        <span class="subheader-text">My Work / My Projects</span>
+
+        <div class="projects-container">
+          <!-- 
+            TODO
+
+            This is where the project cards live. Here's a base level project card for you to copy:
+            <div class="project-card">
+              <img src="./assets/images/IMAGE_NAME" class="project-image">
+              <div class="project-card-text-container">
+                <div class="subheader-text project-title">PROJECT_NAME</div>
+                <div class="body-text project-card-text">SMALL_PROJECT_DESCRIPTION</div>
+              </div>
+              <a class="button" href="./project-pages/PROJECT_PAGE_NAME.html">
+                <span class="button-text">Read More</span>
+                <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+              </a>
+            </div>
+
+            - To add a project to the this area, copy the above, paste it below this comment, and change the following:
+                - IMAGE_NAME: the name of the image file in assets/images
+                - PROJECT_NAME: the name of the project (keep it short, it only shows 1 line)
+                - SMALL_PROJECT_DESCRIPTION: a quick project description (max 4 lines)
+                - PROJECT_PAGE_NAME.html: the html filename for the project (must be in project-pages folder)
+          -->
+          <!-- SAMPLE PROJECT CARD -->
+          <!-- <div class="project-card">
+            <img src="./assets/images/todoapp-screenshot.png" class="project-image">
+            <div class="project-card-text-container">
+              <div class="subheader-text project-title">To Do App</div>
+              <div class="body-text project-card-text">Simple Django-based web app for task management with
+                priority setting, scheduling, and completion tracking.</div>
+            </div>
+            <a class="button" href="./project-pages/project-template.html">
+              <span class="button-text">Read More</span>
+              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+            </a>
+          </div> -->
+
+          <div class="project-card">
+            <img src="./assets/images/todoapp-screenshot.png" class="project-image">
+            <div class="project-card-text-container">
+              <div class="subheader-text project-title">To Do App</div>
+              <div class="body-text project-card-text">Simple Django-based web app for task management with
+                priority setting, scheduling, and completion tracking.</div>
+            </div>
+            <a class="button" href="http://muzammil13todoapp.pythonanywhere.com/">
+              <span class="button-text">Live Demo</span>
+              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+            </a>
+          </div>
+
+          <div class="project-card">
+            <img src="./assets/images/storefont-screenshot.jpeg" class="project-image">
+            <div class="project-card-text-container">
+              <div class="subheader-text project-title">StoreFont Shopping</div>
+              <div class="body-text project-card-text">Django E-commerce Website - StoreFont :
+                  Browse, Search, Add Electronics & gadgets to your cart</div>
+            </div>
+            <a class="button" href=" https://muzammil13sfproj.pythonanywhere.com/shop/">
+              <span class="button-text">Live Demo</span>
+              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+            </a>
+          </div>
+
+          <div class="project-card">
+            <img src="./assets/images/sancharamTravels-screenshot.jpg" class="project-image">
+            <div class="project-card-text-container">
+              <div class="subheader-text project-title">SANCHARAM Travels</div>
+              <div class="body-text project-card-text">A Webpage for Travels based on Kerala Tourism.</div>
+            </div>
+            <a class="button" href="muzammil13travelproj.pythonanywhere.com">
+              <span class="button-text">Live Demo</span>
+              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+            </a>
+          </div>
+
+          <div class="project-card">
+            <img src="./assets/images/imdbLite-screenshot.png" class="project-image">
+            <div class="project-card-text-container">
+              <div class="subheader-text project-title">IMDB Lite</div>
+              <div class="body-text project-card-text">A Sample Movie Details page. Ui inspired from Netflix and Works like lite version of IMDB</div>
+            </div>
+            <a class="button" href="https://muzammil13movieproj.pythonanywhere.com/">
+              <span class="button-text">Live Demo</span>
+              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+            </a>
+          </div>
+
+          <div class="project-card">
+            <img src="./assets/images/github-mark.png" class="project-image">
+            <div class="project-card-text-container">
+              <div class="subheader-text project-title">Github Repositories</div>
+              <div class="body-text project-card-text">Kindly 8 working repositories. To get to know more, please Visit my Github repository for more updates!</div>
+            </div>
+            <a class="button" href="https://github.com/muzammil-13?tab=repositories">
+              <span class="button-text">Visit</span>
+              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div id="footer">
+
+      <a class="icon-link" target="_blank" href="https://github.com/muzammil-13">
+        <image src="./assets/icons/github-mark.svg" class="footer-icon"/>
+      </a>
+      <!-- 
+        TODO - Change href to your Instagram account (can also delete entire "a" element if no Instagram) 
+
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="https://instagram.com/_mzml13">
+        <image src="./assets/icons/instagram.svg" class="footer-icon"/>
+      </a>
+      <!-- 
+        TODO - Change href to your Twitter account (can also delete entire "a" element if no Twitter) 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" target="_blank" href="https://twitter.com/_muzammil13">
+        <image src="./assets/icons/twitter.svg" class="footer-icon"/>
+      </a>
+      <!-- 
+        TODO - Change the email after "mailto" to your contact email 
+      
+        This should be the same across all pages.
+      -->
+      <a class="icon-link" href="mailto:muzammilibrahim13@gmail.com">
+        <image src="./assets/icons/mail.svg" class="footer-icon"/>
+      </a>
+    </div>
+
+	</body>
 </html>
