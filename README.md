@@ -1,6 +1,20 @@
-<h1>This is my github page.</h1>
+## My Portfolio Website
 
-<p>
-Developed a simple personal portfolio website using HTML, CSS, and JavaScript. This project showcases my front-end development skills and ability to create a user-friendly online presence. The website is hosted through GitHub Pages, demonstrating my understanding of version control and deployment.
-Inspired by Unemployables #1311
-</p>
+This repository contains the source code for my personal portfolio website, hosted through GitHub Pages.
+
+**Project Description**
+
+This project is a simple website showcasing my front-end development skills and ability to create a user-friendly online presence. It's built using HTML, CSS, and JavaScript. 
+
+Hosting the website on GitHub Pages demonstrates my understanding of version control with Git and the deployment process.
+
+**Inspiration**
+
+This project was inspired by Unemployables #1311. 
+
+
+**Live Demo**
+
+Visit the live demo of the website at [link](https://muzammil-13.github.io/).
+
+**Feel free to explore the code and leave feedback!**
