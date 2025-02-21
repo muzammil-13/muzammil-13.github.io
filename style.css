@@ -153,6 +153,73 @@ body {
     padding: 4rem 2rem;
 }
 
+/* About Section Styles */
+.about-text {
+    background: var(--surface);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.intro-section {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    color: var(--accent);
+}
+
+.current-focus, .beyond-tech, .vision {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent);
+    background: var(--background);
+    border-radius: 0 8px 8px 0;
+}
+
+.current-focus h3, .beyond-tech h3, .vision h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--highlight);
+    margin-bottom: 1rem;
+}
+
+.current-focus i, .beyond-tech i, .vision i {
+    font-size: 1.2rem;
+}
+
+.cta-section {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+.connect-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.resume-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: var(--gradient);
+    color: var(--white);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.3s ease;
+}
+
+.resume-button:hover {
+    transform: translateY(-2px);
+}
+
+
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
