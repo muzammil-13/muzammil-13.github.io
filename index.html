@@ -1,221 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-
-    
-    <link rel="icon" href="./assets/images/muz-yellow_bg.png"/>
-		<title>Muzammil's Portfolio</title>
-    <meta name="description" content="A portfolio containing my github repositories (projects).">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-		<link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/typography.css">
-    <link rel="stylesheet" href="./css/utilities.css">
-
-		<script defer src="./js/script.js"></script>
-	</head>
-	<body>
-    <!-- NAVBAR -->
-    <div class="navbar">
-      <a class="nav-title-link" href="./index.html">
-        <span class="nav-title">Muzammil's Portfolio</span>
-        <a class="button" href="mailto:pmmuzammilibrahim@gmail.com">
-          <span class="button-text">Contact Me</span>
-        </a>
-      </a>
-    </div>
-
-    <!-- MAIN PAGE CONTENT -->
-    <div id="main-content">
-
-      <!-- PORTFOLIO HEADER -->
-      <div id="portfolio-header">
-        <div id="portfolio-header-image-container">
-          
-          <img src="./assets/images/muz-yellow_bg.png" class="portfolio-header-image" alt="Muzammil's yellow circled Dp comes here">
-          
-          </a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muzammil Ibrahim - Full Stack Engineer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Hi 👋, I'm Muzammil Ibrahim</h1>
+            <p>A Full Stack Engineer from KL, India.</p>
         </div>
+    </header>
 
-          
-        <div id="portfolio-header-text-container">
-            <div class="header-text">
-              <span class="main-title">Hey, I'm Muzammil</span>
-              <div class="body-text">I'm a Python Full Stack Developer seeking opportunities to contribute to a dynamic team environment, leverage my skills in development, and gain further experience in building real-world applications.</div>
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#socials">Socials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="container">
+        <h2>About Me</h2>
+        <p>
+            🔭 I’m currently working on <strong>Hobby Projects</strong>.<br>
+            🌱 I’m currently learning <strong>MERN Stack & DevOps Practices</strong> to enhance my Software Engineering Skills.<br>
+            👯 I’m looking to collaborate on <a href="https://opensource.googleblog.com/" target="_blank">Google❤️ Open Source</a>.<br>
+            🤝 I’m looking for help with <a href="https://github.com/muzammil-13/airbnb-clone" target="_blank">My Latest Project: AirBnB-clone</a>.<br>
+            👨‍💻 All of my projects are available at <a href="https://muzammil-13.github.io/" target="_blank">My Personal Github Page</a>.<br>
+            📝 I regularly write articles on <a href="https://www.notion.so/invite/672d39e45530cc5cd01b06bb5ae4dc437cb926d4" target="_blank">My Notion Space</a>.<br>
+            💬 Ask me about <strong>Tech, Fitness, Adventures, ...</strong><br>
+            📫 How to reach me: <a href="mailto:muzammilibrahim13@gmail.com">muzammilibrahim13@gmail.com</a>.<br>
+            📄 Know about my experiences: <a href="https://drive.google.com/file/d/15cWNcvsN7wTC6lar999HxAJqx5L_XIrX/view?usp=sharing" target="_blank">Resume</a>.<br>
+            ⚡ Fun fact: <strong>Graduated in '23 with a Computer Applications Degree and a passion for all things tech!</strong>
+        </p>
+    </section>
+
+    <section id="skills" class="container">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <h3>Programming Languages</h3>
+            <div class="badges">
+                <span class="badge">Python</span>
+                <span class="badge">JavaScript</span>
+                <span class="badge">HTML5</span>
+                <span class="badge">Bash Script</span>
             </div>
-            
-            <a class="button" href="/assets/Muzammil_Tech_ATS_Resume__26_5_2024_.pdf" download="Muzammil_ibrahim_Resume.pdf"">
-              <span class="button-text">My Resume</span>
-            </a>
-             
-            <a class="button" id="my-work-link">
-              <span class="button-text">Check out my projects</span> 
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt=""/>
-            </a>
+
+            <h3>Frontend Development</h3>
+            <div class="badges">
+                <span class="badge">React</span>
+                <span class="badge">Next.js</span>
+                <span class="badge">React Router</span>
+                <span class="badge">Bootstrap</span>
+                <span class="badge">MUI</span>
+                <span class="badge">Vite</span>
+                <span class="badge">Flutter</span>
+            </div>
+
+            <h3>Backend Development</h3>
+            <div class="badges">
+                <span class="badge">Django</span>
+                <span class="badge">Django REST</span>
+                <span class="badge">Node.js</span>
+                <span class="badge">Express.js</span>
+                <span class="badge">Flask</span>
+                <span class="badge">JWT</span>
+            </div>
+
+            <h3>Databases</h3>
+            <div class="badges">
+                <span class="badge">MongoDB</span>
+                <span class="badge">MySQL</span>
+                <span class="badge">Postgres</span>
+                <span class="badge">MariaDB</span>
+                <span class="badge">SQLite</span>
+            </div>
+
+            <h3>DevOps & Cloud</h3>
+            <div class="badges">
+                <span class="badge">Docker</span>
+                <span class="badge">Git</span>
+                <span class="badge">GitHub</span>
+                <span class="badge">GitHub Actions</span>
+                <span class="badge">Google Cloud</span>
+                <span class="badge">Terraform</span>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <!-- ABOUT SECTION -->
-      
-      <div id="about-section">
-        <span class="subheader-text">About Me</span>
-        <div class="about-section-content">          
-          <div class="body-text">
-            👋 Hello! I'm Muzammil 👋
-
-            <br><br>As a BCA graduate with a passion for technology and fitness, I thrive on the intersection of code and dumbbells. 🚀 Here's a glimpse into my professional journey:
-
-            <br><br>🌟 Tech Enthusiast: Im currently pursuing a Python Full Stack internship, where I' diving deep into web development, databases, APIs and Machine Learning. From front-end design to back-end logic, I'm all about turning ideas into functional applications.
-
-            <br><br>🏢 Business Mindset: Beyond coding, I'm actively involved in my family business, where I've learned valuable lessons about strategy, customer relations, and problem-solving. Balancing tech innovation with real-world business challenges keeps me on my toes.
-
-            <br><br>💡 Problem Solver: Whether it's debugging a tricky piece of code or optimizing a business process, I thrive on finding elegant solutions. My motto: “Every challenge is an opportunity to learn and grow.”
-
-            <br><br>🏋️‍♂️ Fitness Fanatic: When I'm not typing away at my keyboard, you'll find me at the gym, lifting weights and chasing those endorphins. Fitness isn't just a hobby; it's a lifestyle that fuels my productivity and creativity.
-
-            <br><br>🔗 Let's Connect!: Whether you're a fellow tech enthusiast, a business professional, or someone who shares my love for fitness, I'd love to connect. Feel free to reach out—I'm always up for a good conversation!
-            <br><br>
-
-            <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/muzammil-ibrahim-pm">
-              <image src="./assets/icons/linkedin-svgrepo-com.svg" class="footer-icon" alt="linkedin icon"/>
-            </a>
-
-            <!-- Linkedin badge -->
-            <!-- <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="light" data-type="VERTICAL" data-vanity="muzammil-ibrahim-pm" data-version="v1">
-              <a class="badge-base__link LI-simple-link" href="https://in.linkedin.com/in/muzammil-ibrahim-pm?trk=profile-badge">
-                Linkedin
-              </a>
-            </div> -->
-          </div>
+    <section id="projects" class="container">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>AirBnB Clone</h3>
+            <p>A full-stack clone of AirBnB built using the MERN stack. Features include user authentication, property listings, and booking management.</p>
+            <a href="https://github.com/muzammil-13/airbnb-clone" target="_blank">View Project</a>
         </div>
-      </div>
-
-      <!-- PROJECTS / MY WORK SECTION -->
-      <div id="my-work-section">
-        <span class="subheader-text">My Projects</span>
-
-        <div class="projects-container">
-          
-          <!-- SAMPLE PROJECT CARD -->
-          <!-- <div class="project-card">
-            <img src="./assets/images/todoapp-screenshot.png" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">To Do App</div>
-              <div class="body-text project-card-text">Simple Django-based web app for task management with
-                priority setting, scheduling, and completion tracking.</div>
-            </div>
-            <a class="button" href="./project-pages/project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div> -->
-
-          <div class="project-card">
-            <img src="./assets/images//muzammil13todoapp/todoapp-screenshot.png" class="project-image" alt="">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">To Do App</div>
-              <div class="body-text project-card-text">Simple Django-based web app for task management with
-                priority setting, scheduling, and completion tracking.</div>
-            </div>
-            <a class="button" href="http://muzammil13todoapp.pythonanywhere.com/">
-              <span class="button-text">Live Demo</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt=""/>
-            </a>
-            <a class="button" href="./project-pages/muzammil13todoapp-project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-
-          <div class="project-card">
-            <img src="./assets/images/muzammil13sfproj/storefont-screenshot.jpeg" class="project-image" alt="">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">StoreFront Shopping</div>
-              <div class="body-text project-card-text">Django E-commerce Website - StoreFont :
-                  Browse, Search, Add Electronics & gadgets to your cart</div>
-            </div>
-            <a class="button" href=" https://muzammil13sfproj.pythonanywhere.com/shop/">
-              <span class="button-text">Live Demo</span>
-              <image src="./assets/icons/arrow-right.svg" alt="" class="right-arrow-icon"/>
-            </a>
-            <a class="button" href="./project-pages/muzammil13sfproj-project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-
-          <div class="project-card">
-            <img src="./assets/images/muzammil13travelproj/sancharamTravels-screenshot.jpg" class="project-image" alt="">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">SANCHARAM Travels</div>
-              <div class="body-text project-card-text">A Webpage for Travels based on Kerala Tourism.</div>
-            </div>
-            <a class="button" href="https://muzammil13travelproj.pythonanywhere.com">
-              <span class="button-text">Live Demo</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt=""/>
-            </a>
-            <a class="button" href="./project-pages/muzammil13travelproj-project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-
-          <div class="project-card">
-            <img src="./assets/images/muzammil13movieproj/imdbLite-screenshot.png" class="project-image" alt="">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">IMDB Lite</div>
-              <div class="body-text project-card-text">A Sample Movie Details page. Ui inspired from Netflix and Works like lite version of IMDB</div>
-            </div>
-            <a class="button" href="https://muzammil13movieproj.pythonanywhere.com/">
-              <span class="button-text">Live Demo</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt=""/>
-            </a>
-            <a class="button" href="./project-pages/muzammil13movieproj-project-template.html">
-              <span class="button-text">Read More</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon"/>
-            </a>
-          </div>
-
-          <div class="project-card">
-            <img src="./assets/images/github-mark.png" class="project-image">
-            <div class="project-card-text-container">
-              <div class="subheader-text project-title">Github Repositories</div>
-              <div class="body-text project-card-text">Currently working repositories : 8. To get to know more, Kindly please Visit my Github repository for more updates!</div>
-            </div>
-            <a class="button" href="https://github.com/muzammil-13?tab=repositories">
-              <span class="button-text">Visit</span>
-              <image src="./assets/icons/arrow-right.svg" class="right-arrow-icon" alt=""/>
-            </a>
-          </div>
-
+        <div class="project">
+            <h3>Task Management App</h3>
+            <p>A task management application built with React and Firebase. Includes real-time updates and user authentication.</p>
+            <a href="https://github.com/muzammil-13/task-manager" target="_blank">View Project</a>
         </div>
-      </div>
-    </div>
+    </section>
 
-    <!-- FOOTER -->
-    <div id="footer">
+    <section id="socials" class="container">
+        <h2>Socials</h2>
+        <div class="social-links">
+            <a href="https://discord.gg/739813212022767627" target="_blank">Discord</a>
+            <a href="https://instagram.com/_mzml13" target="_blank">Instagram</a>
+            <a href="https://linkedin.com/in/muzammil-ibrahim-pm" target="_blank">LinkedIn</a>
+            <a href="https://medium.com/@muzammilibrahim13" target="_blank">Medium</a>
+            <a href="https://stackoverflow.com/users/17174588/muzammil-ibrahim" target="_blank">Stack Overflow</a>
+            <a href="https://x.com/_muzammil13" target="_blank">X (Twitter)</a>
+            <a href="https://youtube.com/@_muzammil13" target="_blank">YouTube</a>
+        </div>
+    </section>
 
-      <a class="icon-link" target="_blank" href="https://github.com/muzammil-13">
-        <image src="./assets/icons/github-mark.svg" class="footer-icon" alt=""/>
-      </a>
-      
-      <a class="icon-link" target="_blank" href="https://instagram.com/_mzml13">
-        <image src="./assets/icons/instagram.svg" class="footer-icon" alt=""/>
-      </a>
-      
-      <a class="icon-link" target="_blank" href="https://twitter.com/_muzammil13">
-        <image src="./assets/icons/twitter.svg" class="footer-icon" alt=""/>
-      </a>
-      
-      <a class="icon-link" href="mailto:muzammilibrahim13@gmail.com">
-        <image src="./assets/icons/mail.svg" class="footer-icon" alt=""/>
-      </a>
-    </div>
+    <section id="contact" class="container">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
 
-	</body>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-<!--js src Linkedin badge -->
-<!-- <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script> -->
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
 
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Muzammil Ibrahim. All rights reserved.</p>
+            <p><a href="https://buymeacoffee.com/muzammil_13" target="_blank">Buy Me a Coffee</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
