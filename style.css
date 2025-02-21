@@ -1,18 +1,30 @@
 :root {
-    --primary: #2A2A2A;
-    --secondary: #7928CA;
-    --accent: #FF0080;
-    --background: #ffffff;
-    --surface: #f8f9fa;
-    --text: #2A2A2A;
-    --gradient: linear-gradient(135deg, var(--secondary), var(--accent));
+    --primary: #606c38;    /* Olive green */
+    --secondary: #283618;  /* Dark forest green */
+    --background: #fefae0; /* Cream */
+    --accent: #dda15e;    /* Light brown */
+    --highlight: #bc6c25;  /* Deep brown */
+    --text: #283618;      /* Dark forest green text */
+    --surface: #ffffff;    /* White surface */
+    --gradient: linear-gradient(135deg, var(--primary), var(--highlight));
 }
 
 [data-theme="dark"] {
-    --background: #1a1a1a;
-    --surface: #2d2d2d;
-    --text: #ffffff;
+    --background: #283618;  /* Dark forest green background */
+    --surface: #606c38;    /* Olive green surface */
+    --text: #fefae0;       /* Cream text */
+    --accent: #dda15e;     /* Light brown accent */
+    --highlight: #bc6c25;  /* Deep brown highlight */
 }
+
+[data-theme="light"] {
+    --background: #fefae0;  /* Cream background */
+    --surface: #ffffff;     /* White surface */
+    --text: #283618;       /* Dark forest green text */
+    --accent: #dda15e;     /* Light brown accent */
+    --highlight: #bc6c25;  /* Deep brown highlight */
+}
+
 
 * {
     margin: 0;
