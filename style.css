@@ -1,34 +1,27 @@
 :root {
-    --primary: #606c38;    /* Olive green */
-    --secondary: #283618;  /* Dark forest green */
-    --background: #fefae0; /* Cream */
-    --accent: #dda15e;    /* Light brown */
-    --highlight: #bc6c25;  /* Deep brown */
-    --text: #283618;      /* Dark forest green text */
-    --surface: #ffffff;    /* White surface */
-    --gradient: linear-gradient(135deg, var(--primary), var(--highlight));
+    --primary: #584944;    /* Deep brown */
+    --secondary: #7F6666;  /* Warm gray */
+    --accent: #91634B;     /* Rich copper */
+    --highlight: #FCC50C;  /* Vibrant gold */
+    --white: #FEFEFE;      /* Clean white */
+    --gradient: linear-gradient(135deg, var(--accent), var(--highlight));
 }
 
 [data-theme="dark"] {
-    --background: #121212;     /* Deep dark background */
-    --surface: #1e1e1e;       /* Slightly lighter dark surface */
-    --text: #fefae0;          /* Cream text for readability */
-    --accent: #dda15e;        /* Keeping warm accent */
-    --highlight: #bc6c25;     /* Keeping deep brown highlight */
-    --primary: #606c38;       /* Keeping olive green for consistency */
-    --secondary: #283618;     /* Keeping forest green */
-    --gradient: linear-gradient(135deg, #606c38, #bc6c25);
+    --background: #584944;     /* Deep brown background */
+    --surface: #7F6666;       /* Warm gray surface */
+    --text: #FEFEFE;         /* Clean white text */
+    --accent: #91634B;       /* Rich copper accent */
+    --highlight: #FCC50C;    /* Vibrant gold highlight */
 }
 
 [data-theme="light"] {
-    --background: #fefae0;    /* Cream background */
-    --surface: #ffffff;       /* White surface */
-    --text: #283618;         /* Dark forest green text */
-    --accent: #dda15e;       /* Light brown accent */
-    --highlight: #bc6c25;    /* Deep brown highlight */
+    --background: #FEFEFE;    /* Clean white background */
+    --surface: #f5f5f5;      /* Light gray surface */
+    --text: #584944;         /* Deep brown text */
+    --accent: #91634B;       /* Rich copper accent */
+    --highlight: #FCC50C;    /* Vibrant gold highlight */
 }
-
-
 
 * {
     margin: 0;
@@ -113,6 +106,41 @@ body {
     margin: 0 auto;
     text-align: center;
 }
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 2rem;
+    border: 4px solid var(--accent);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.project-image:hover img {
+    transform: scale(1.05);
+}
+
 
 .gradient-text {
     background: var(--gradient);
