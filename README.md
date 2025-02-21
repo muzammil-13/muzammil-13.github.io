@@ -1,4 +1,3 @@
-
 # Muzammil Ibrahim - Portfolio
 
 ![Portfolio Preview](assets/portfolio-preview.png)
@@ -26,17 +25,6 @@ A modern, responsive portfolio website showcasing my work as a Full Stack Engine
 ## Live Demo
 
 Visit the live site: [muzammil-13.github.io](https://muzammil-13.github.io)
-
-## Local Development
-
-Clone and run the portfolio locally:
-
-```bash
-git clone https://github.com/muzammil-13/muzammil-13.github.io.git
-cd muzammil-13.github.io
-```
-
-Open `index.html` in your browser to view the site.
 
 ## Connect With Me
 
