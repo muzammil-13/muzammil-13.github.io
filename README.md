@@ -1,4 +1,3 @@
-
 # Muzammil Ibrahim - Portfolio
 
 ![Portfolio Preview](assets/portfolio-preview.png)
@@ -27,22 +26,11 @@ A modern, responsive portfolio website showcasing my work as a Full Stack Engine
 
 Visit the live site: [muzammil-13.github.io](https://muzammil-13.github.io)
 
-## Local Development
-
-Clone and run the portfolio locally:
-
-```bash
-git clone https://github.com/muzammil-13/muzammil-13.github.io.git
-cd muzammil-13.github.io
-```
-
-Open `index.html` in your browser to view the site.
-
 ## Connect With Me
 
 * LinkedIn: [muzammil-ibrahim-pm](command:_cody.vscode.open?%22https%3A%2F%2Flinkedin.com%2Fin%2Fmuzammil-ibrahim-pm%22)
 * GitHub: [muzammil-13](command:_cody.vscode.open?%22https%3A%2F%2Fgithub.com%2Fmuzammil-13%22)
-* Twitter: [@_muzammil13](command:_cody.vscode.open?%22https%3A%2F%2Ftwitter.com%2F_muzammil13%22)Support
+* Twitter: [@_muzammil13](command:_cody.vscode.open?%22https%3A%2F%2Ftwitter.com%2F_muzammil13%22)
 
 ## License
 
