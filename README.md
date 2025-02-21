@@ -1,20 +1,49 @@
-## My Portfolio Website
 
-This repository contains the source code for my personal portfolio website, hosted through GitHub Pages.
+# Muzammil Ibrahim - Portfolio
 
-**Project Description**
+![Portfolio Preview](assets/portfolio-preview.png)
 
-This project is a simple website showcasing my front-end development skills and ability to create a user-friendly online presence. It's built using HTML, CSS, and JavaScript. 
+A modern, responsive portfolio website showcasing my work as a Full Stack Engineer. Built with clean, efficient code and modern web technologies.
 
-Hosting the website on GitHub Pages demonstrates my understanding of version control with Git and the deployment process.
+## Features
 
-**Inspiration**
+- 🌓 Dark/Light theme switching
+- 🎨 Modern UI with smooth animations
+- 📱 Fully responsive design
+- ⚡ Optimized performance
+- 🔍 SEO friendly
+- 📊 Project showcase
+- 📬 Contact form integration
 
-This project was inspired by Unemployables #1311. 
+## Tech Stack
 
+- HTML5
+- CSS3 with modern features
+- Vanilla JavaScript
+- AOS Animations
+- Font Awesome Icons
 
-**Live Demo**
+## Live Demo
 
-Visit the live demo of the website at [link](https://muzammil-13.github.io/).
+Visit the live site: [muzammil-13.github.io](https://muzammil-13.github.io)
 
-**Feel free to explore the code and leave feedback!**
+## Local Development
+
+Clone and run the portfolio locally:
+
+```bash
+git clone https://github.com/muzammil-13/muzammil-13.github.io.git
+cd muzammil-13.github.io
+```
+
+Open `index.html` in your browser to view the site.
+
+## Connect With Me
+
+* LinkedIn: [muzammil-ibrahim-pm](command:_cody.vscode.open?%22https%3A%2F%2Flinkedin.com%2Fin%2Fmuzammil-ibrahim-pm%22)
+* GitHub: [muzammil-13](command:_cody.vscode.open?%22https%3A%2F%2Fgithub.com%2Fmuzammil-13%22)
+* Twitter: [@_muzammil13](command:_cody.vscode.open?%22https%3A%2F%2Ftwitter.com%2F_muzammil13%22)Support
+
+## License
+
+MIT © Muzammil Ibrahim
