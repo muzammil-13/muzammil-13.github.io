@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#ffffff">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdnjs.cloudflare.com; style-src 'self' https://unpkg.com https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com;">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Muzammil Ibrahim - Full Stack Engineer specializing in MERN stack and DevOps">
     <meta name="keywords" content="Full Stack Developer, Python Django, MERN Stack, DevOps, Software Engineer">
@@ -29,7 +32,7 @@
     <section id="hero" class="hero">
         <div class="hero-content" data-aos="fade-up">
             <div class="profile-image">
-                <img src="assets/profile.jpg" alt="Muzammil Ibrahim">
+                <img src="assets/profile.jpg" alt="Muzammil Ibrahim" loading="lazy" width="200" height="200">
             </div>
             
             <h1>Hi 👋, I'm <span class="gradient-text">Muzammil Ibrahim</span></h1>
@@ -178,11 +181,11 @@
                       <a href="https://x.com/_muzammil13" target="_blank"><i class="fab fa-twitter"></i></a>
                   </div>
               </div>
-              <form id="contact-form" class="contact-form" data-aos="fade-left">
-                  <div class="form-group">
-                      <label for="name">Name</label>
-                      <input type="text" id="name" required>
-                  </div>
+              <form id="contact-form" class="contact-form" data-aos="fade-left" autocomplete="off" novalidate>
+                <div class="form-group">
+                    <label for="name">Name <span aria-label="required">*</span></label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>            
                   <div class="form-group">
                       <label for="email">Email</label>
                       <input type="email" id="email" required>
@@ -204,6 +207,11 @@
   </footer>
 
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        AOS.init();
+    });
+    </script>
   <script src="script.js"></script>
 </body>
 </html>
