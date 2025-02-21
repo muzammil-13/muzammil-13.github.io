@@ -10,20 +10,24 @@
 }
 
 [data-theme="dark"] {
-    --background: #283618;  /* Dark forest green background */
-    --surface: #606c38;    /* Olive green surface */
-    --text: #fefae0;       /* Cream text */
-    --accent: #dda15e;     /* Light brown accent */
-    --highlight: #bc6c25;  /* Deep brown highlight */
+    --background: #121212;     /* Deep dark background */
+    --surface: #1e1e1e;       /* Slightly lighter dark surface */
+    --text: #fefae0;          /* Cream text for readability */
+    --accent: #dda15e;        /* Keeping warm accent */
+    --highlight: #bc6c25;     /* Keeping deep brown highlight */
+    --primary: #606c38;       /* Keeping olive green for consistency */
+    --secondary: #283618;     /* Keeping forest green */
+    --gradient: linear-gradient(135deg, #606c38, #bc6c25);
 }
 
 [data-theme="light"] {
-    --background: #fefae0;  /* Cream background */
-    --surface: #ffffff;     /* White surface */
-    --text: #283618;       /* Dark forest green text */
-    --accent: #dda15e;     /* Light brown accent */
-    --highlight: #bc6c25;  /* Deep brown highlight */
+    --background: #fefae0;    /* Cream background */
+    --surface: #ffffff;       /* White surface */
+    --text: #283618;         /* Dark forest green text */
+    --accent: #dda15e;       /* Light brown accent */
+    --highlight: #bc6c25;    /* Deep brown highlight */
 }
+
 
 
 * {
@@ -41,13 +45,24 @@ body {
 }
 
 .glass-nav {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(var(--surface), 0.8);
     backdrop-filter: blur(12px);
     position: fixed;
     width: 100%;
     z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .glass-nav {
+    background: rgba(30, 30, 30, 0.8);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+[data-theme="light"] .glass-nav {
+    background: rgba(255, 255, 255, 0.8);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
+
 
 .nav-container {
     max-width: 1200px;
