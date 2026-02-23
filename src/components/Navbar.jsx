@@ -19,6 +19,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                 <div className="hidden md:flex items-center space-x-2 lg:space-x-8">
                     <a href="#hero">Home</a>
                     <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
                     <a href="#skills">Skills</a>
                     <a href="#projects">Projects</a>
                     <a href="#journey">Journey</a>
