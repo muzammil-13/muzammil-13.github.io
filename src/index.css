@@ -6,7 +6,7 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply font-inter text-numberText bg-white dark:bg-black dark:text-white transition-colors duration-300;
   }
@@ -16,7 +16,7 @@
   .glass-nav {
     @apply fixed top-0 w-full backdrop-blur-md bg-white/80 dark:bg-black/85 border-b border-transparent dark:border-gray-900 z-50 py-4 transition-all duration-300;
   }
-  
+
   .glass-nav.scrolled {
     @apply shadow-sm py-3 dark:border-gray-800;
   }
@@ -38,7 +38,7 @@
   }
 
   .card {
-    @apply bg-white dark:bg-cardBgDark rounded-lg shadow-sm border border-transparent dark:border-gray-900 p-6 hover:-translate-y-1 hover:shadow-md transition-all duration-300;
+    @apply bg-white dark:bg-cardBgDark rounded-2xl shadow-sm border border-gray-100 dark:border-gray-900/80 p-6 transition-all duration-300;
   }
 
   .badge {
@@ -54,6 +54,7 @@
 .gradient-text {
   background: linear-gradient(45deg, var(--tw-colors-mikadoYellow, #fcc50c), var(--tw-colors-rawUmber, #91634b));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
