@@ -17,31 +17,85 @@ const volunteerRoles = [
         icon: "fa-hands-helping"
     },
     {
+        title: "muLearner",
+        org: "MuLearn Foundation",
+        duration: "Apr 2023 - Jun 2025",
+        category: "Science & Technology",
+        description: "Active participant in the MuLearn community, contributing to various interest groups and hackathons.",
+        highlights: [
+            "Certified RAG LLM Bot Developer (Pathway x GTech).",
+            "Top #19 in Launchpad 2024 (IEEE x KDISC x GTech).",
+            "Active in Web Dev, Cloud & DevOps, and Product Management groups."
+        ],
+        icon: "fa-brain"
+    },
+    {
         title: "Community Volunteer",
         org: "Mallu Programmers",
         duration: "Jan 2023 - Jun 2025",
         category: "Education",
         description: "Mentoring students on career paths and supporting aspiring developers with resources and insights to transition into tech.",
-        highlights: [],
+        highlights: [
+            "Mentoring 10+ students on career paths and upskilling."
+        ],
         icon: "fa-users"
     },
     {
-        title: "Innovator & Volunteer",
-        org: "IEDC MAC & Novian Hub",
-        duration: "Jul 2021 - May 2023",
-        category: "Science and Technology",
-        description: "Organized Android Development workshops and fostered a culture of problem-solving through hackathons.",
+        title: "H2S Innovator",
+        org: "Hack2skill",
+        duration: "2024",
+        category: "Science & Technology",
+        description: "Participated in the AI for Impact 2024 APAC Hackathon, focusing on building socially impactful AI solutions.",
+        highlights: [],
+        icon: "fa-robot"
+    },
+    {
+        title: "GCP Member",
+        org: "Google Cloud Skills Boost",
+        duration: "Jan 2023 - Present",
+        category: "Science & Technology",
+        description: "Active member continuously upskilling and participating in Google Cloud initiatives.",
+        highlights: [],
+        icon: "fa-cloud"
+    },
+    {
+        title: "GDG Member",
+        org: "Google Developers Group",
+        duration: "Jul 2021 - Present",
+        category: "Science & Technology",
+        description: "Long-standing member of the Google Developers Group, participating in various community tech events.",
+        highlights: [],
+        icon: "fa-code"
+    },
+    {
+        title: "Innovator",
+        org: "IEDC MAC",
+        duration: "Jan 2022 - May 2023",
+        category: "Science & Technology",
+        description: "Fostered a culture of innovation and bridged the gap between students and industry within the college community.",
         highlights: [
-            "Bridged the gap between students and industry opportunities.",
+            "Encouraged participation in industry summits and hackathons.",
             "Supported software development initiatives within the IEDC community."
         ],
         icon: "fa-lightbulb"
     },
     {
+        title: "Community Development Volunteer",
+        org: "Novian Hub",
+        duration: "Jul 2021 - May 2023",
+        category: "Education",
+        description: "Assisted in organizing tech bootcamps and mentoring students in app development.",
+        highlights: [
+            "Mentored Android Development Workshops.",
+            "Actively contributed to hackathons and innovation drives."
+        ],
+        icon: "fa-laptop-code"
+    },
+    {
         title: "AOSP Contributor",
         org: "XDA Developers",
         duration: "Apr 2017 - Sep 2020",
-        category: "Science and Technology",
+        category: "Science & Technology",
         description: "Actively contributed to Android device communities, collaborating with developers to enhance custom ROMs and troubleshoot issues.",
         highlights: [
             "Tested and reviewed custom AOSP/ported ROMs for stability and security.",
@@ -56,16 +110,33 @@ const volunteerRoles = [
         duration: "Dec 2020 - Mar 2023",
         category: "Social Services",
         description: "Completed 240 hours of community service, including special camping programs and organizing local Covid-19 vaccination surveys.",
-        highlights: [],
+        highlights: [
+            "Planted a tree each day during the Special Camping Programme."
+        ],
         icon: "fa-seedling"
     },
     {
+        title: "Student Lead",
+        org: "Indian Red Cross Society (IRCS)",
+        duration: "Jun 2014 - Mar 2015",
+        category: "Social Services",
+        description: "Led Junior Red Cross initiatives, fostering social responsibility among students.",
+        highlights: [
+            "Organized fundraising programs for charitable causes.",
+            "Coordinated donation drives for a nearby old age home."
+        ],
+        icon: "fa-medkit"
+    },
+    {
         title: "Volunteer & Lead",
-        org: "Mujahid Students Movement / IRCS",
+        org: "Mujahid Students Movement (MSM)",
         duration: "Jan 2014 - Dec 2022",
-        category: "Education & Social Services",
-        description: "Led unit-level initiatives, organized fundraising programs, and coordinated student leadership camps focused on ethics and civic responsibility.",
-        highlights: [],
+        category: "Education",
+        description: "Led unit-level initiatives (Unit Secretary & District Executive Member), coordinated student engagement, and managed event execution.",
+        highlights: [
+            "Organized camps, student leadership programs, and ethics workshops.",
+            "Engaged in interfaith discussions and social awareness initiatives."
+        ],
         icon: "fa-heart"
     }
 ];
