@@ -6,6 +6,7 @@ import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Journey from './components/Journey';
+import Volunteering from './components/Volunteering';
 import Community from './components/Community';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -54,6 +55,7 @@ function App() {
                 <Skills />
                 <Projects />
                 <Journey />
+                <Volunteering />
                 <Community />
                 <Contact />
             </main>

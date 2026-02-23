@@ -60,7 +60,7 @@ const Experience = () => {
             <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-roseTaupe/5 to-transparent pointer-events-none -z-10 dark:from-roseTaupe/10"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="section-title text-center mb-16" data-aos="fade-up">💼 Professional Experience</h2>
+                <h2 className="section-title text-center mb-16" data-aos="fade-up">💼 Experience</h2>
 
                 <div className="space-y-12 max-w-4xl mx-auto">
                     {experiences.map((exp, index) => (
