@@ -1,17 +1,32 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Community = () => {
     return (
         <section id="community" className="py-20 bg-gray-50/50 dark:bg-black/50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="section-title text-center mb-4" data-aos="fade-up">🌐 Community & Collaboration</h2>
-                <p className="text-center text-gray-600 dark:text-gray-400 mb-16" data-aos="fade-up">
-                    I'm an active member of tech communities and always open to meaningful collaborations.
-                </p>
+                <motion.div
+                    className="text-center mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
+                    <h2 className="section-title mb-4">🌐 Community & Collaboration</h2>
+                    <p className="text-gray-600 dark:text-gray-400">
+                        I'm an active member of tech communities and always open to meaningful collaborations.
+                    </p>
+                </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-                    <div className="card group hover:border-mikadoYellow/30" data-aos="fade-up">
+                    <motion.div
+                        className="card group hover:border-mikadoYellow/30"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
                         <h3 className="text-xl font-bold mb-4 flex items-center gap-3 text-roseTaupe dark:text-gray-200">
                             <i className="fas fa-users text-mikadoYellow"></i> Communities
                         </h3>
@@ -27,9 +42,15 @@ const Community = () => {
                                 <span>⛎</span> <strong>PyGrammers</strong> - Python enthusiasts building and learning together
                             </li>
                         </ul>
-                    </div>
+                    </motion.div>
 
-                    <div className="card group hover:border-mikadoYellow/30" data-aos="fade-up" data-aos-delay="100">
+                    <motion.div
+                        className="card group hover:border-mikadoYellow/30"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                    >
                         <h3 className="text-xl font-bold mb-4 flex items-center gap-3 text-roseTaupe dark:text-gray-200">
                             <i className="fas fa-handshake text-mikadoYellow"></i> Collaboration
                         </h3>
@@ -40,9 +61,15 @@ const Community = () => {
                             <li>Hackathons and coding challenges</li>
                             <li>Open source contributions</li>
                         </ul>
-                    </div>
+                    </motion.div>
 
-                    <div className="card group hover:border-mikadoYellow/30" data-aos="fade-up" data-aos-delay="200">
+                    <motion.div
+                        className="card group hover:border-mikadoYellow/30"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    >
                         <h3 className="text-xl font-bold mb-4 flex items-center gap-3 text-roseTaupe dark:text-gray-200">
                             <i className="fas fa-lightbulb text-mikadoYellow"></i> Mentorship
                         </h3>
@@ -69,7 +96,7 @@ const Community = () => {
                                 Learning in public and documenting my journey
                             </li>
                         </ul>
-                    </div>
+                    </motion.div>
 
                 </div>
             </div>

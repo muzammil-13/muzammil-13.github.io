@@ -15,16 +15,6 @@ function App() {
     const [theme, setTheme] = useState('light');
 
     useEffect(() => {
-        // Initialize AOS
-        if (window.AOS) {
-            window.AOS.init({
-                duration: 800,
-                once: true,
-                offset: 100,
-                easing: 'ease-in-out'
-            });
-        }
-
         // Initialize Theme
         const savedTheme = localStorage.getItem('theme');
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;

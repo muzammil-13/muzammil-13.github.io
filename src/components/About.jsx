@@ -1,13 +1,28 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const About = () => {
     return (
         <section id="about" className="py-20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="section-title text-center" data-aos="fade-up">🧩 Who I Am</h2>
+                <motion.h2
+                    className="section-title text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
+                    🧩 Who I Am
+                </motion.h2>
 
                 <div className="grid grid-cols-1 gap-12">
-                    <div className="space-y-8" data-aos="fade-right">
+                    <motion.div
+                        className="space-y-8"
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    >
 
                         <div className="bg-white dark:bg-cardBgDark p-6 rounded-xl shadow-sm border border-transparent dark:border-gray-800">
                             <p className="text-lg mb-4">
@@ -67,18 +82,24 @@ const About = () => {
                             </a>
                         </div>
 
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 
-            <div className="mt-20 max-w-4xl mx-auto px-4 text-center py-12 bg-gray-50 dark:bg-cardBgDark rounded-2xl shadow-sm border border-transparent dark:border-gray-800" data-aos="fade-up">
+            <motion.div
+                className="mt-20 max-w-4xl mx-auto px-4 text-center py-12 bg-gray-50 dark:bg-cardBgDark rounded-2xl shadow-sm border border-transparent dark:border-gray-800"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+            >
                 <p className="text-2xl italic mb-4 font-semibold text-numberText dark:text-white">
                     "Grit, faith, and consistency over hype."
                 </p>
                 <p className="text-lg text-roseTaupe font-medium">
                     I build slow, strong, and intentional — inch by inch.
                 </p>
-            </div>
+            </motion.div>
         </section>
     );
 };
