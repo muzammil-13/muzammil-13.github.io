@@ -23,6 +23,7 @@ const Navbar = ({ theme, toggleTheme }) => {
                     <a href="#skills">Skills</a>
                     <a href="#projects">Projects</a>
                     <a href="#journey">Journey</a>
+                    <a href="#volunteering">Volunteering</a>
                     <a href="#contact">Contact</a>
                 </div>
 

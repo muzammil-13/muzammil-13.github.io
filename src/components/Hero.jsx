@@ -1,7 +1,14 @@
+import { motion } from 'framer-motion';
+
 const Hero = () => {
     return (
         <section id="hero" className="min-h-screen flex items-center justify-center pt-20 px-4">
-            <div className="text-center max-w-3xl mx-auto" data-aos="fade-up">
+            <motion.div
+                className="text-center max-w-3xl mx-auto"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+            >
 
                 <div className="mb-8 flex justify-center">
                     <div className="relative w-48 h-48 rounded-full border-4 border-mikadoYellow overflow-hidden shadow-xl">
@@ -35,7 +42,7 @@ const Hero = () => {
                     </a>
                 </div>
 
-            </div>
+            </motion.div>
         </section>
     );
 };

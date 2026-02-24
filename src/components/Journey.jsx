@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const timelineEvents = [
     {
@@ -74,20 +75,37 @@ const Journey = () => {
     return (
         <section id="journey" className="py-20 bg-gray-50 dark:bg-black">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="section-title text-center mb-4" data-aos="fade-up">📚 My Learning Journey</h2>
-                <p className="text-center text-gray-600 dark:text-gray-400 mb-16" data-aos="fade-up">
+                <motion.h2
+                    className="section-title text-center mb-4"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
+                    📚 My Learning Journey
+                </motion.h2>
+                <motion.p
+                    className="text-center text-gray-600 dark:text-gray-400 mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.1 }}
+                >
                     The path hasn't been linear—but it's been intentional.
-                </p>
+                </motion.p>
 
                 <div className="relative max-w-4xl mx-auto py-10 timeline">
                     {timelineEvents.map((event, index) => {
                         const isEven = index % 2 !== 0; // 0-indexed, so 0 is "odd" visually
                         return (
-                            <div
+                            <motion.div
                                 key={index}
                                 className={`w-full md:w-1/2 mb-8 relative pl-[70px] pr-5 md:pl-[40px] md:pr-[40px] box-border ${isEven ? 'md:left-1/2' : 'md:left-0 text-left md:text-right md:pl-5 md:pr-10'
                                     }`}
-                                data-aos={isEven ? "custom-fade-left" : "custom-fade-right"}
+                                initial={{ opacity: 0, x: isEven ? -40 : 40 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.6 }}
                             >
                                 {/* Timeline Dot */}
                                 <div
@@ -107,7 +125,7 @@ const Journey = () => {
                                         {event.content}
                                     </div>
                                 </div>
-                            </div>
+                            </motion.div>
                         );
                     })}
                 </div>

@@ -1,15 +1,30 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
     return (
         <section id="contact" className="py-20 bg-gray-50 dark:bg-black">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="section-title text-center" data-aos="fade-up">📫 Get In Touch</h2>
+                <motion.h2
+                    className="section-title text-center"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6 }}
+                >
+                    📫 Get In Touch
+                </motion.h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-12">
 
                     {/* Contact Info */}
-                    <div className="lg:col-span-1 space-y-8" data-aos="fade-right">
+                    <motion.div
+                        className="lg:col-span-1 space-y-8"
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
                         <div>
                             <h3 className="text-2xl font-bold mb-6 text-numberText dark:text-white">Connect With Me</h3>
                             <div className="flex flex-wrap gap-4">
@@ -46,10 +61,16 @@ const Contact = () => {
                         <a href="https://buymeacoffee.com/muzammil_13" target="_blank" rel="noreferrer" className="btn-primary inline-flex items-center gap-2">
                             <i className="fas fa-coffee"></i> Buy Me A Coffee
                         </a>
-                    </div>
+                    </motion.div>
 
                     {/* Contact Form */}
-                    <div className="lg:col-span-2" data-aos="fade-left">
+                    <motion.div
+                        className="lg:col-span-2"
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6 }}
+                    >
                         <form action="https://formsubmit.co/muzammilibrahim13@gmail.com" method="POST" className="card space-y-6">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
@@ -93,7 +114,7 @@ const Contact = () => {
                                 Send Message <i className="fas fa-paper-plane ml-2"></i>
                             </button>
                         </form>
-                    </div>
+                    </motion.div>
 
                 </div>
             </div>
