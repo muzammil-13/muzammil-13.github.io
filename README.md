@@ -28,9 +28,9 @@ Visit the live site: [muzammil-13.github.io](https://muzammil-13.github.io)
 
 ## Connect With Me
 
-* LinkedIn: [muzammil-ibrahim-pm](command:_cody.vscode.open?%22https%3A%2F%2Flinkedin.com%2Fin%2Fmuzammil-ibrahim-pm%22)
-* GitHub: [muzammil-13](command:_cody.vscode.open?%22https%3A%2F%2Fgithub.com%2Fmuzammil-13%22)
-* Twitter: [@_muzammil13](command:_cody.vscode.open?%22https%3A%2F%2Ftwitter.com%2F_muzammil13%22)
+* LinkedIn: [muzammilipm](https://www.linkedin.com/in/muzammilipm)
+* GitHub: [muzammil-13](https://github.com/muzammil-13)
+* Twitter: [@_muzammil13](https://x.com/_muzammil13)
 
 ## License
 
