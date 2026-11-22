@@ -1,37 +1,22 @@
-# Muzammil Ibrahim - Portfolio
+# Muzammil Ibrahim
 
-![Portfolio Preview](assets/portfolio-preview.png)
+## GitHub profile summary
 
-A modern, responsive portfolio website showcasing my work as a Full Stack Engineer. Built with clean, efficient code and modern web technologies.
+DataOps Analyst focused on enterprise automation, healthcare claims data validation, and mainframe modernization. I work with Python, SQL, REST APIs, and IBM z/OS systems to improve data confidence and operational workflows. Interested in applied AI and human-led, AI-assisted engineering.
 
-## Features
+## Selected work
 
-- 🌓 Dark/Light theme switching
-- 🎨 Modern UI with smooth animations
-- 📱 Fully responsive design
-- ⚡ Optimized performance
-- 🔍 SEO friendly
-- 📊 Project showcase
-- 📬 Contact form integration
+- **Zentinel Agent:** Modernized TN3270/GETRC monitoring with z/OSMF REST APIs. Validated 137+ jobs across 10+ runs, achieved 7/7 output parity, and reduced the monitoring cycle to 2–15 seconds.
+- **Operational Data Validator:** Built a productionized, YAML-driven Python framework for healthcare claims validation with clear PASS/WARN/FAIL results.
+- **Teradata-to-Snowflake migration:** Led reconciliation and business-rule validation, achieving approximately 98% parity.
 
-## Tech Stack
+## Portfolio
 
-- HTML5
-- CSS3 with modern features
-- Vanilla JavaScript
-- AOS Animations
-- Font Awesome Icons
+This repository contains my portfolio website, built with React, Vite, Tailwind CSS, and Framer Motion.
 
-## Live Demo
+Visit [muzammil-13.github.io](https://muzammil-13.github.io).
 
-Visit the live site: [muzammil-13.github.io](https://muzammil-13.github.io)
+## Connect
 
-## Connect With Me
-
-* LinkedIn: [muzammilipm](https://www.linkedin.com/in/muzammilipm)
-* GitHub: [muzammil-13](https://github.com/muzammil-13)
-* Twitter: [@_muzammil13](https://x.com/_muzammil13)
-
-## License
-
-MIT © Muzammil Ibrahim
+- [LinkedIn](https://www.linkedin.com/in/muzammilipm)
+- [GitHub](https://github.com/muzammil-13)

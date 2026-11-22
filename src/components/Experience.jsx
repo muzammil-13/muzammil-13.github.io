@@ -3,54 +3,32 @@ import { motion } from 'framer-motion';
 
 const experiences = [
     {
-        role: "Application Developer",
+        role: "DataOps Analyst",
         company: "IBM",
-        duration: "Aug 2025 - Present",
+        duration: "Current",
         location: "Bengaluru, Karnataka, India (Hybrid)",
-        description: "Contributing to the Automated Adjudication (AA) track by streamlining claims processing and data reporting for a major US Healthcare client. Bridging the gap between legacy mainframe systems and modern automation.",
+        description: "Support data operations for IBM Healthcare Claims, combining Python automation, SQL-based reconciliation, mainframe batch operations, and production support.",
         highlights: [
-            "Automation & Scripting: Developed Python scripts in Spyder IDE to automate Daily MTD reporting and stakeholder email distributions.",
-            "Data Engineering: Managed high-volume data extraction/cleaning using Teradata SQL, MS Access, and Excel.",
-            "Mainframe Operations: Executed and validated automated adjudication workflows using JCL, ensuring accuracy in high-volume processing.",
-            "Pend Analysis: Conducted daily analysis to identify transaction bottlenecks for smoother straight-through processing."
+            "Built Python automation for month-to-date reporting and stakeholder email distribution.",
+            "Led reconciliation and business-rule validation for a Teradata-to-Snowflake migration, achieving approximately 98% parity.",
+            "Use SQL and reporting tools to extract, reconcile, and validate healthcare claims data.",
+            "Execute and validate adjudication batch workflows using JCL, and analyze daily pend data to support operations.",
+            "Modernized mainframe job monitoring through z/OSMF REST APIs, with validation across 137+ jobs."
         ],
-        skills: ["Python", "Teradata SQL", "Automation", "Data Engineering"]
-    },
-    {
-        role: "Technical Representative Intern",
-        company: "IBM",
-        duration: "Jun 2025 - Present",
-        location: "On-site",
-        description: "Gained enterprise IT Service Management (ITIL4) & Application Monitoring exposure.",
-        highlights: [],
-        skills: ["IT Infrastructure", "Application Monitoring", "ITSM"]
+        skills: ["Python", "SQL", "z/OS", "Data Validation", "REST APIs"]
     },
     {
         role: "Business Operations & IT Associate",
         company: "Family Run Business House",
         duration: "Jan 2024 - May 2025",
         location: "Erattupetta, Kerala, India",
-        description: "Operated at the intersection of retail operations and technology, identifying friction points in small business workflows and solving them with digital tools. Shaped vision for Retail-Tech SaaS products.",
+        description: "Supported day-to-day business operations and IT, applying practical systems and process improvements across retail and manufacturing workflows.",
         highlights: [
-            "Digital Transformation: Digitized manual workflows by implementing Payment tracking, reducing cash discrepancies.",
-            "Systems & Compliance: Managed ERP invoicing and GST compliance for a furniture manufacturing unit.",
-            "Operational Efficiency: Optimized inventory flow and closed stock-to-billing gaps.",
-            "IT Infrastructure: Sole IT Lead managing hardware, local networking, and zero downtime."
+            "Introduced digital payment tracking to replace manual tracking workflows.",
+            "Managed ERP invoicing and GST-related processes for a furniture manufacturing unit.",
+            "Supported inventory workflows, business hardware, and local network operations."
         ],
-        skills: ["Business Operations", "ERP", "IT Infrastructure"]
-    },
-    {
-        role: "Web Developer & OSS Contributor",
-        company: "Freelance",
-        duration: "Oct 2024 - Mar 2025",
-        location: "Remote",
-        description: "Delivering responsive, SEO-optimized web solutions for SMBs.",
-        highlights: [
-            "Delivered websites for SMBs (Flora Boutique, Cakeberries).",
-            "Contributed to OHC Care (Django-React healthcare platform).",
-            "Built ExamInsights (AI exam analysis tool) with Streamlit + RAG."
-        ],
-        skills: ["React", "Django", "Streamlit", "RAG"]
+        skills: ["Business Operations", "ERP", "Workflow Improvement", "IT Support"]
     }
 ];
 
@@ -68,7 +46,7 @@ const Experience = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    💼 Experience
+                    Experience
                 </motion.h2>
 
                 <div className="space-y-12 max-w-4xl mx-auto">
