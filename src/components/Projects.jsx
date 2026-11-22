@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { ArchitectureDiagram } from './ArchitectureDiagrams';
 
 const projects = [
     {
@@ -9,6 +10,13 @@ const projects = [
         architecture: "Replaced the TN3270/GETRC interaction path with z/OSMF REST APIs. The resulting workflow connects job monitoring with spool analysis, anomaly detection, and notifications.",
         implementation: "Built and validated monitoring, spool analysis, anomaly detection, and notification workflows. Supported z/OSMF capability implementation in Devin UEP.",
         technologies: ["z/OSMF REST APIs", "z/OS", "TN3270 / GETRC", "Mainframe batch operations"],
+        diagramId: "zentinel-agent",
+        kpis: [
+            { value: "137+", label: "Jobs" },
+            { value: "10+", label: "Validation Runs" },
+            { value: "7/7", label: "Output Parity" },
+            { value: "2–15 sec", label: "Runtime" }
+        ],
         results: [
             "Reduced monitoring cycle time from 2–4 minutes to 2–15 seconds.",
             "Achieved 7/7 output parity.",
@@ -23,10 +31,14 @@ const projects = [
         summary: "A productionized, YAML-driven validation framework for healthcare claims data.",
         challenge: "Healthcare claims validation requires applying business rules and comparing operational data consistently. The task was to turn those checks into reusable automation with clear outcomes.",
         architecture: "Validation rules are defined in YAML and evaluated by a Python framework. Results use explicit PASS, WARN, and FAIL states to communicate validation outcomes.",
-        implementation: "Created automated healthcare claims validation and a Cals-versus-Python month-to-date data validator, using rule-driven checks to compare and assess operational data.",
+        implementation: "Created automated Commercial Claims and GBD validation, plus a Cals-versus-Python month-to-date (MTD) data validator. Productionized the internal framework to compare and assess operational data using reusable rules.",
         technologies: ["Python", "YAML", "Healthcare claims data", "Cals vs Python MTD validation"],
+        diagramId: "operational-data-validator",
         results: [
-            "Delivered a productionized, configuration-driven validation framework.",
+            "Commercial Claims Validation.",
+            "GBD Validation.",
+            "MTD Validation.",
+            "Productionized for internal use.",
             "Standardized validation outcomes as PASS, WARN, or FAIL.",
             "Automated healthcare claims checks, including Cals-versus-Python month-to-date validation."
         ],
@@ -37,9 +49,10 @@ const projects = [
         title: "Teradata → Snowflake Migration Validation",
         summary: "A validation-first case study in reconciling migrated data and verifying business rules.",
         challenge: "Establish confidence in migrated operational outputs while maintaining the business rules and reporting expectations that stakeholders rely on.",
-        approach: "Compared Teradata and Snowflake outputs, combining reconciliation checks with business-rule verification and stakeholder review.",
-        validationStrategy: "Use reconciliation testing to measure output parity, verify business rules, and review results with stakeholders before relying on migrated outputs.",
+        architecture: "Compared Teradata and Snowflake outputs through reconciliation checks, business-rule verification, and stakeholder review.",
+        implementation: "Applied reconciliation testing to measure output parity, verify business rules, and review results with stakeholders before relying on migrated outputs.",
         technologies: ["Teradata", "Snowflake", "SQL", "Data Reconciliation"],
+        diagramId: "snowflake-migration",
         results: [
             "Achieved 98% output parity.",
             "Verified business rules as part of migration validation.",
@@ -74,7 +87,7 @@ const Projects = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    Selected Enterprise Work
+                    Projects
                 </motion.h2>
                 <p className="text-center text-gray-600 dark:text-gray-400 mb-16 max-w-3xl mx-auto">
                     Case studies in mainframe modernization and validation-first data operations.
@@ -92,7 +105,7 @@ const Projects = () => {
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
                             <h3 className="text-2xl font-bold text-numberText dark:text-white mb-2">{project.title}</h3>
-                            <p className="text-gray-600 dark:text-gray-400 mb-6">{project.summary}</p>
+                            <ProjectDetail label="Project overview">{project.summary}</ProjectDetail>
 
                             {project.kpis && (
                                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
@@ -105,14 +118,13 @@ const Projects = () => {
                                 </div>
                             )}
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                                 <ProjectDetail label="Challenge">{project.challenge}</ProjectDetail>
-                                <ProjectDetail label={project.approach ? "Approach" : "Architecture"}>
-                                    {project.approach || project.architecture}
-                                </ProjectDetail>
-                                <ProjectDetail label={project.validationStrategy ? "Validation strategy" : "Implementation"}>
-                                    {project.validationStrategy || project.implementation}
-                                </ProjectDetail>
+                                <div>
+                                    <ProjectDetail label="Architecture">{project.architecture}</ProjectDetail>
+                                    <ArchitectureDiagram diagramId={project.diagramId} />
+                                </div>
+                                <ProjectDetail label="Implementation">{project.implementation}</ProjectDetail>
                                 <div>
                                     <h4 className="font-semibold text-numberText dark:text-gray-200 mb-2">Technologies</h4>
                                     <div className="flex flex-wrap gap-2">

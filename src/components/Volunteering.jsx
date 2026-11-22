@@ -169,7 +169,7 @@ const Volunteering = () => {
     const visibleRoles = showAll ? otherRoles : otherRoles.slice(0, 2);
 
     return (
-        <section id="volunteering" className="py-24 relative overflow-hidden bg-white dark:bg-black">
+        <div id="community-impact" className="py-14 relative overflow-hidden bg-white dark:bg-black scroll-mt-20">
             {/* Decals */}
             <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-roseTaupe/5 rounded-full blur-[100px] -z-10 pointer-events-none"></div>
 
@@ -181,7 +181,7 @@ const Volunteering = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="section-title mb-4">Community Impact</h2>
+                    <h3 className="section-title mb-4">Community Impact</h3>
                     <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
                         Beyond engineering, I contribute to technology accessibility and digital literacy initiatives through IBM Impact volunteering programs. I enjoy simplifying complex technical concepts and creating inclusive learning experiences that help individuals build confidence with technology.
                     </p>
@@ -361,7 +361,7 @@ const Volunteering = () => {
                     </button>
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
 

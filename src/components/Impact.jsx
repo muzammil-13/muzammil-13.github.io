@@ -1,13 +1,14 @@
 import { useEffect, useRef } from 'react';
 import { animate, motion, useInView, useMotionValue, useTransform } from 'framer-motion';
+import Volunteering from './Volunteering';
 
 const metrics = [
-    { target: 98, format: (progress) => `${Math.round(progress * 98)}%+`, label: "Snowflake migration parity" },
-    { target: 137, format: (progress) => `${Math.round(progress * 137)}+`, label: "Mainframe jobs validated" },
-    { target: 10, format: (progress) => `${Math.round(progress * 10)}+`, label: "z/OSMF validation runs" },
-    { target: 7, format: (progress) => `${Math.round(progress * 7)}/7`, label: "Output parity achieved" },
-    { target: 15, format: (progress) => `${Math.round(progress * 2)}–${Math.round(progress * 15)} sec`, label: "Monitoring cycle time" },
-    { target: 2, format: (progress) => `${Math.round(progress * 2)}+`, label: "Productionized internal solutions" }
+    { target: 98, format: (progress) => `${Math.round(progress * 98)}%+`, label: "Snowflake Parity" },
+    { target: 137, format: (progress) => `${Math.round(progress * 137)}+`, label: "Jobs Validated" },
+    { target: 7, format: (progress) => `${Math.round(progress * 7)}/7`, label: "Output Parity" },
+    { target: 10, format: (progress) => `${Math.round(progress * 10)}+`, label: "Validation Runs" },
+    { target: 15, format: (progress) => `${Math.round(progress * 2)}–${Math.round(progress * 15)} sec`, label: "Monitoring Runtime" },
+    { target: 2, format: (progress) => `${Math.round(progress * 2)}+`, label: "Productionized Internal Solutions" }
 ];
 
 const MetricCard = ({ metric, index }) => {
@@ -40,17 +41,35 @@ const MetricCard = ({ metric, index }) => {
     );
 };
 
-const Impact = () => (
-    <section id="impact" className="py-12 bg-gray-50/70 dark:bg-black/50">
+const ImpactPreview = () => (
+    <div className="py-10 bg-gray-50/70 dark:bg-black/50" aria-label="Impact metrics preview">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-center text-xl font-bold text-numberText dark:text-white mb-6">Enterprise metrics</h2>
+            <h2 className="text-center text-xl font-bold text-numberText dark:text-white mb-6">Impact at a glance</h2>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+                {metrics.slice(0, 5).map((metric, index) => (
+                    <MetricCard key={metric.label} metric={metric} index={index} />
+                ))}
+            </div>
+        </div>
+    </div>
+);
+
+const Impact = () => (
+    <section id="impact" className="py-16 bg-gray-50/70 dark:bg-black/50 scroll-mt-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="section-title text-center mb-4">Impact</h2>
+            <h3 className="text-center text-xl font-bold text-numberText dark:text-white mb-8">Professional Impact</h3>
             <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4">
                 {metrics.map((metric, index) => (
                     <MetricCard key={metric.label} metric={metric} index={index} />
                 ))}
             </div>
+            <div className="mt-16">
+                <Volunteering />
+            </div>
         </div>
     </section>
 );
 
+export { ImpactPreview };
 export default Impact;

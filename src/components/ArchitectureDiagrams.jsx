@@ -15,7 +15,7 @@ const diagrams = [
         title: "Operational Data Validator",
         description: "Rule-driven validation from source report to actionable output.",
         lanes: [
-            { title: "Validation flow", steps: ["Source Report", "YAML Rules", "Validation Engine", "PASS | WARN | FAIL", "Output Report"] }
+            { title: "Validation flow", steps: ["Source Data", "YAML Rules", "Validation Engine", "PASS | WARN | FAIL", "Validation Report"] }
         ]
     },
     {
@@ -137,55 +137,36 @@ const ArchitectureSvg = ({ diagram }) => {
     );
 };
 
-const ArchitectureDiagrams = () => (
-    <section id="architecture" className="py-24 bg-gray-50/70 dark:bg-black/60">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.h2
-                className="section-title text-center mb-4"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-            >
-                Architecture & Validation Flows
-            </motion.h2>
-            <p className="text-center text-gray-600 dark:text-gray-400 mb-12">
-                Clear system flows for selected modernization and data quality work.
-            </p>
-            <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-                {diagrams.map((diagram, index) => (
-                    <motion.article
-                        key={diagram.id}
-                        className={`card ${diagram.lanes.length === 2 ? 'xl:col-span-2' : ''}`}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-40px" }}
-                        transition={{ duration: 0.45, delay: index * 0.06 }}
-                    >
-                        <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-5">
-                            <div>
-                                <h3 className="text-xl font-bold text-numberText dark:text-white">{diagram.title}</h3>
-                                <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">{diagram.description}</p>
-                            </div>
-                            <button
-                                type="button"
-                                onClick={() => downloadDiagram(diagram)}
-                                className="btn-secondary inline-flex shrink-0 items-center justify-center gap-2 text-sm"
-                            >
-                                <i className="fas fa-download" aria-hidden="true"></i>
-                                Download SVG
-                            </button>
-                        </div>
-                        <div className="overflow-x-auto rounded-xl bg-white/70 p-3 dark:bg-black/30 sm:p-5">
-                            <div className="mx-auto min-w-[560px] max-w-4xl">
-                                <ArchitectureSvg diagram={diagram} />
-                            </div>
-                        </div>
-                    </motion.article>
-                ))}
-            </div>
-        </div>
-    </section>
-);
+export const ArchitectureDiagram = ({ diagramId }) => {
+    const diagram = diagrams.find((item) => item.id === diagramId);
+    if (!diagram) {
+        throw new Error(`Unknown architecture diagram: ${diagramId}`);
+    }
 
-export default ArchitectureDiagrams;
+    return (
+        <motion.div
+            className="mt-4"
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-40px" }}
+            transition={{ duration: 0.4 }}
+        >
+            <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 mb-4">
+                <p className="text-sm text-gray-600 dark:text-gray-400">{diagram.description}</p>
+                <button
+                    type="button"
+                    onClick={() => downloadDiagram(diagram)}
+                    className="btn-secondary inline-flex shrink-0 items-center justify-center gap-2 text-sm"
+                >
+                    <i className="fas fa-download" aria-hidden="true"></i>
+                    Download SVG
+                </button>
+            </div>
+            <div className="overflow-x-auto rounded-xl bg-white/70 p-3 dark:bg-black/30 sm:p-5">
+                <div className="mx-auto min-w-[560px] max-w-4xl">
+                    <ArchitectureSvg diagram={diagram} />
+                </div>
+            </div>
+        </motion.div>
+    );
+};

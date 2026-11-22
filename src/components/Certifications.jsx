@@ -9,17 +9,17 @@ const certifications = [
 ];
 
 const Certifications = () => (
-    <section id="certifications" className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.h2
+    <div id="certifications" className="mt-20 scroll-mt-24">
+        <div className="max-w-5xl mx-auto">
+            <motion.h3
                 className="section-title text-center mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
             >
-                Technical Certifications
-            </motion.h2>
+                Certifications
+            </motion.h3>
             <p className="text-center text-gray-600 dark:text-gray-400 mb-14">
                 Credentials across applied AI and IBM Z systems.
             </p>
@@ -30,7 +30,7 @@ const Certifications = () => (
                         <motion.article
                             key={certification.title}
                             className={`relative flex pl-14 sm:w-1/2 sm:pl-0 ${index % 2 === 0 ? 'sm:pr-10' : 'sm:ml-auto sm:pl-10'}`}
-                            initial={{ opacity: 0, x: index % 2 === 0 ? -18 : 18 }}
+                            initial={{ opacity: 0, y: 18 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true, margin: "-30px" }}
                             transition={{ duration: 0.4 }}
@@ -58,7 +58,7 @@ const Certifications = () => (
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 );
 
 export default Certifications;

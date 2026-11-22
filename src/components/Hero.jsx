@@ -25,16 +25,17 @@ const Hero = () => {
                     I modernize enterprise data and <span className="gradient-text">systems.</span>
                 </h1>
 
-                <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-medium mb-4">
-                    DataOps Analyst | Enterprise Automation | Mainframe Modernization
+                <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 font-medium mb-3">
+                    DataOps &amp; Enterprise Automation Engineer
                 </p>
 
                 <div className="text-lg text-gray-500 dark:text-gray-400 mb-8 space-y-3">
                     <p className="text-numberText dark:text-white font-semibold">Muzammil Ibrahim</p>
-                    <p>
-                        I work across IBM Healthcare Claims, building Python automation and data validation
-                        workflows while supporting enterprise systems on z/OS. My focus is making operational
-                        data more reliable and legacy workflows more observable and maintainable.
+                    <p className="font-medium text-base md:text-lg">
+                        Python Automation <span aria-hidden="true">·</span> Mainframe Modernization <span aria-hidden="true">·</span> Enterprise Systems <span aria-hidden="true">·</span> Applied AI
+                    </p>
+                    <p className="text-base">
+                        IBM experience building Python automation and DataOps workflows for enterprise healthcare claims and z/OS systems.
                     </p>
                 </div>
 

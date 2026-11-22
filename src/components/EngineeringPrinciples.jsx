@@ -7,7 +7,7 @@ const principles = [
         icon: "fa-circle-check"
     },
     {
-        title: "Automation with Accountability",
+        title: "Automate with Accountability",
         description: "Automate repetitive work while preserving traceability and auditability.",
         icon: "fa-clipboard-check"
     },
@@ -24,17 +24,17 @@ const principles = [
 ];
 
 const EngineeringPrinciples = () => (
-    <section id="engineering-principles" className="py-24 bg-gray-50/70 dark:bg-black/60">
+    <div id="engineering-principles" className="py-14 bg-gray-50/70 dark:bg-black/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.h2
+            <motion.h3
                 className="section-title text-center mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
             >
-                How I Build Software
-            </motion.h2>
+                Engineering Principles
+            </motion.h3>
             <p className="text-center text-gray-600 dark:text-gray-400 mb-12 max-w-2xl mx-auto">
                 Practical engineering principles for dependable enterprise change.
             </p>
@@ -57,7 +57,7 @@ const EngineeringPrinciples = () => (
                 ))}
             </div>
         </div>
-    </section>
+    </div>
 );
 
 export default EngineeringPrinciples;

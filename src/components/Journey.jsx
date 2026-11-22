@@ -3,60 +3,40 @@ import { motion } from 'framer-motion';
 const timelineEvents = [
     {
         year: "2023",
-        title: "BCA Graduation",
+        title: "BCA",
         content: "Completed a Bachelor of Computer Applications and established a foundation in software and IT."
     },
     {
         year: "2024–2025",
-        title: "Business Operations & IT",
+        title: "Family Business Operations & IT",
         content: "Supported ERP invoicing, inventory workflows, digital payment tracking, hardware, and local networking."
     },
     {
         year: "2025",
         title: "IBM India CIC",
-        content: "Joined IBM India CIC and began contributing to enterprise healthcare claims operations and technology."
-    },
-    {
-        year: "2025",
-        title: "IBM Impact Volunteer",
-        content: "Started volunteering in digital literacy, internet safety, and technology education with Spastics Society of Karnataka."
+        content: "Joined IBM India CIC as a Technical Representative Intern and began contributing to enterprise healthcare claims operations and technology."
     },
     {
         year: "2026",
         title: "DataOps Analyst",
         content: "Build and support data validation, reconciliation, automation, and production workflows in healthcare claims."
-    },
-    {
-        year: "2026",
-        title: "Operational Data Validator",
-        content: "Developed a YAML-driven validation framework with clear PASS, WARN, and FAIL outcomes."
-    },
-    {
-        year: "2026",
-        title: "Zentinel Agent",
-        content: "Modernized mainframe job monitoring through z/OSMF REST APIs with measurable output parity."
-    },
-    {
-        year: "Future",
-        title: "Applied AI & Enterprise Platforms",
-        content: "Continue building practical expertise in applied AI, platform engineering, and reliable enterprise automation."
     }
 ];
 
 const Journey = () => (
-    <section id="journey" className="py-24 bg-gray-50 dark:bg-black">
+    <div id="career-journey" className="py-14 bg-gray-50 dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.h2
+            <motion.h3
                 className="section-title text-center mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
             >
-                Career & Project Timeline
-            </motion.h2>
+                Career Journey
+            </motion.h3>
             <p className="text-center text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
-                A progression from foundational study and business operations into enterprise DataOps and modernization.
+                From foundational study and family business operations to enterprise technology and DataOps.
             </p>
 
             <div className="relative max-w-5xl mx-auto py-4 timeline">
@@ -91,7 +71,7 @@ const Journey = () => (
                 })}
             </div>
         </div>
-    </section>
+    </div>
 );
 
 export default Journey;

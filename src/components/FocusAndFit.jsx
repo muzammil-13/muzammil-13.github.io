@@ -9,15 +9,6 @@ const focusAreas = [
     { name: "Observability & Operational Intelligence", status: "Active" }
 ];
 
-const opportunityAreas = [
-    "Enterprise Automation",
-    "Platform Engineering",
-    "DataOps",
-    "Mainframe Modernization",
-    "Applied AI",
-    "Solutions Engineering"
-];
-
 const strengths = [
     "Production support exposure in healthcare claims operations",
     "Experience across mainframe systems and modern APIs and data platforms",
@@ -27,9 +18,9 @@ const strengths = [
 ];
 
 const FocusAndFit = () => (
-    <section id="current-focus" className="py-24 bg-gray-50 dark:bg-black">
+    <div id="current-focus" className="py-14 bg-gray-50 dark:bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <motion.h2
+            <motion.h3
                 className="section-title text-center mb-12"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -37,7 +28,7 @@ const FocusAndFit = () => (
                 transition={{ duration: 0.6 }}
             >
                 Current Focus
-            </motion.h2>
+            </motion.h3>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 <motion.div
@@ -86,52 +77,9 @@ const FocusAndFit = () => (
                         ))}
                     </ul>
                 </motion.div>
-
-                <motion.aside
-                    className="card border-mikadoYellow/30 bg-mikadoYellow/5"
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                >
-                    <h3 className="text-xl font-bold mb-5 text-numberText dark:text-white">Looking For Opportunities In</h3>
-                    <ul className="space-y-3">
-                        {opportunityAreas.map((area) => (
-                            <li key={area} className="flex items-start gap-3 text-gray-700 dark:text-gray-300">
-                                <i className="fas fa-check text-mikadoYellow mt-1" aria-hidden="true"></i>
-                                <span>{area}</span>
-                            </li>
-                        ))}
-                    </ul>
-                </motion.aside>
-            </div>
-
-            <div id="resume" className="relative overflow-hidden rounded-3xl bg-numberText px-6 py-12 text-center text-white dark:bg-cardBgDark sm:px-10 mt-10">
-                <div className="absolute -right-12 -top-20 h-56 w-56 rounded-full bg-mikadoYellow/10 blur-3xl" aria-hidden="true"></div>
-                <h3 className="relative text-2xl md:text-3xl font-bold mb-3">
-                    Interested in Enterprise Automation, Mainframe Modernization, DataOps, or Applied AI?
-                </h3>
-                <p className="relative text-gray-200 mb-7">
-                    Let’s connect about evidence-driven engineering and enterprise platforms.
-                </p>
-                <div className="relative flex flex-col sm:flex-row flex-wrap justify-center gap-3">
-                    <a
-                        href="/docs/Muzammil_FDE_Resume_2026-ATS.pdf"
-                        download="Muzammil_FDE_Resume_2026-ATS.pdf"
-                        className="btn-primary inline-flex items-center justify-center gap-2"
-                    >
-                        <i className="fas fa-file-download" aria-hidden="true"></i> Download Resume
-                    </a>
-                    <a href="https://github.com/muzammil-13" target="_blank" rel="noopener noreferrer" className="btn-secondary inline-flex items-center justify-center gap-2 border-white/70 text-white hover:bg-white/10">
-                        <i className="fab fa-github" aria-hidden="true"></i> View GitHub
-                    </a>
-                    <a href="https://www.linkedin.com/in/muzammilipm" target="_blank" rel="noopener noreferrer" className="btn-secondary inline-flex items-center justify-center gap-2 border-white/70 text-white hover:bg-white/10">
-                        <i className="fab fa-linkedin" aria-hidden="true"></i> Connect on LinkedIn
-                    </a>
-                </div>
             </div>
         </div>
-    </section>
+    </div>
 );
 
 export default FocusAndFit;

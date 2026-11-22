@@ -20,7 +20,7 @@ const Contact = () => {
                     {/* Contact Info */}
                     <motion.div
                         className="lg:col-span-1 space-y-8"
-                        initial={{ opacity: 0, x: -30 }}
+                        initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
@@ -28,8 +28,16 @@ const Contact = () => {
                         <div>
                             <h3 className="text-2xl font-bold mb-4 text-numberText dark:text-white">Let’s talk about enterprise engineering</h3>
                             <p className="text-gray-600 dark:text-gray-400 mb-6">
-                                I’m interested in opportunities involving DataOps, enterprise automation, mainframe modernization, and applied AI implementation.
+                                Interested in opportunities involving:
                             </p>
+                            <ul className="space-y-2 text-gray-600 dark:text-gray-400 mb-6">
+                                {["Enterprise Automation", "DataOps", "Applied AI", "Mainframe Modernization", "Platform Engineering", "Solutions Engineering"].map((area) => (
+                                    <li key={area} className="flex items-start gap-3">
+                                        <i className="fas fa-check text-mikadoYellow mt-1" aria-hidden="true"></i>
+                                        <span>{area}</span>
+                                    </li>
+                                ))}
+                            </ul>
                             <div className="flex flex-wrap gap-4">
                                 <a href="https://www.linkedin.com/in/muzammilipm" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="w-12 h-12 flex items-center justify-center rounded-full bg-roseTaupe/10 dark:bg-gray-800 text-numberText dark:text-white hover:text-mikadoYellow dark:hover:text-mikadoYellow hover:-translate-y-1 transition-all text-xl">
                                     <i className="fab fa-linkedin"></i>
@@ -54,7 +62,7 @@ const Contact = () => {
                     {/* Contact Form */}
                     <motion.div
                         className="lg:col-span-2"
-                        initial={{ opacity: 0, x: 30 }}
+                        initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
