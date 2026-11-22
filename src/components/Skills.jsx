@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import Certifications from './Certifications';
 
 const skillCategories = [
     {
@@ -47,7 +48,7 @@ const Skills = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    Skills & Technologies
+                    Technical Skills
                 </motion.h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -79,6 +80,8 @@ const Skills = () => {
                         </motion.div>
                     ))}
                 </div>
+
+                <Certifications />
             </div>
         </section>
     );

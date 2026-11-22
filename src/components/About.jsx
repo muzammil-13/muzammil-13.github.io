@@ -1,4 +1,7 @@
 import { motion } from 'framer-motion';
+import Journey from './Journey';
+import FocusAndFit from './FocusAndFit';
+import EngineeringPrinciples from './EngineeringPrinciples';
 
 const About = () => {
     return (
@@ -14,16 +17,16 @@ const About = () => {
                     About
                 </motion.h2>
 
-                <div className="grid grid-cols-1 gap-12">
+                <div className="max-w-5xl mx-auto">
                     <motion.div
-                        className="space-y-8"
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
+                        className="card space-y-5"
+                        initial={{ opacity: 0, y: 18 }}
+                        whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
+                        transition={{ duration: 0.5 }}
                     >
-
-                        <div className="card space-y-5">
+                        <h3 className="text-xl font-bold text-numberText dark:text-white">Who I Am</h3>
+                        <div className="space-y-4">
                             <p className="text-lg">
                                 I’m a DataOps Analyst working in the IBM Healthcare Claims domain. I build and
                                 support automation and validation workflows that help teams reconcile data,
@@ -35,19 +38,13 @@ const About = () => {
                                 rules, compare outputs, and make operational behavior easier to observe.
                             </p>
                         </div>
-
-                        <div className="card">
-                            <h3 className="text-xl font-bold mb-3 text-roseTaupe dark:text-gray-200">Career journey</h3>
-                            <p className="text-gray-600 dark:text-gray-400">
-                                After completing a Bachelor of Computer Applications, I gained hands-on
-                                experience with business operations and IT in a family-run business. I then
-                                moved into enterprise technology at IBM, where my work has centered on
-                                healthcare claims data, production support, automation, and modernizing
-                                mainframe workflows.
-                            </p>
-                        </div>
-
                     </motion.div>
+                </div>
+
+                <div className="mt-10">
+                    <Journey />
+                    <FocusAndFit />
+                    <EngineeringPrinciples />
                 </div>
             </div>
         </section>

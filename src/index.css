@@ -26,7 +26,15 @@
   }
 
   .nav-links a {
-    @apply ml-8 text-numberText dark:text-white hover:text-mikadoYellow transition-colors duration-300;
+    @apply ml-4 text-numberText dark:text-white hover:text-mikadoYellow transition-colors duration-300;
+  }
+
+  .nav-links {
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
   }
 
   .btn-primary {

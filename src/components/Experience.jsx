@@ -18,8 +18,17 @@ const experiences = [
         skills: ["Python", "SQL", "z/OS", "Data Validation", "REST APIs"]
     },
     {
+        role: "Technical Representative Intern",
+        company: "IBM India CIC",
+        duration: "2025",
+        location: "India",
+        description: "Joined IBM India CIC and began contributing to enterprise healthcare claims operations and technology.",
+        highlights: [],
+        skills: ["Enterprise Technology", "Healthcare Claims", "Operations"]
+    },
+    {
         role: "Business Operations & IT Associate",
-        company: "Family Run Business House",
+        company: "Family Business",
         duration: "Jan 2024 - May 2025",
         location: "Erattupetta, Kerala, India",
         description: "Supported day-to-day business operations and IT, applying practical systems and process improvements across retail and manufacturing workflows.",
@@ -49,73 +58,60 @@ const Experience = () => {
                     Experience
                 </motion.h2>
 
-                <div className="space-y-12 max-w-4xl mx-auto">
+                <div className="space-y-5 max-w-4xl mx-auto">
                     {experiences.map((exp, index) => (
                         <motion.div
                             key={index}
-                            className="relative pl-8 md:pl-0"
+                            className="relative pl-10"
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                         >
-                            {/* Timeline Line (Mobile) */}
-                            <div className="md:hidden absolute left-[11px] top-2 bottom-[-48px] w-[2px] bg-gray-200 dark:bg-gray-800 last:hidden"></div>
-                            {/* Timeline Dot (Mobile) */}
-                            <div className="md:hidden absolute left-0 top-2 w-6 h-6 rounded-full border-4 border-white dark:border-black bg-mikadoYellow z-10"></div>
+                            {index < experiences.length - 1 && (
+                                <div className="absolute left-[11px] top-8 bottom-[-20px] w-[2px] bg-gray-200 dark:bg-gray-800" aria-hidden="true"></div>
+                            )}
+                            <div className="absolute left-0 top-5 z-10 h-6 w-6 rounded-full border-4 border-white bg-mikadoYellow dark:border-black" aria-hidden="true"></div>
 
-                            <div className="card group hover:border-mikadoYellow/30 relative">
-
-                                {/* Desktop layout: Split view */}
-                                <div className="flex flex-col md:flex-row gap-6">
-
-                                    {/* Left Column: Meta Data */}
-                                    <div className="md:w-1/3 shrink-0">
-                                        <h3 className="text-xl font-bold text-numberText dark:text-white group-hover:text-mikadoYellow transition-colors">
+                            <div className="card group p-5 hover:border-mikadoYellow/30">
+                                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                                    <div>
+                                        <h3 className="text-lg font-bold text-numberText dark:text-white group-hover:text-mikadoYellow transition-colors">
                                             {exp.role}
                                         </h3>
-                                        <p className="text-lg font-medium text-roseTaupe mt-1">{exp.company}</p>
-
-                                        <div className="mt-4 space-y-2 text-sm text-gray-500 dark:text-gray-400">
-                                            <p className="flex items-center gap-2">
-                                                <i className="far fa-calendar-alt w-4 text-center"></i>
-                                                {exp.duration}
-                                            </p>
-                                            <p className="flex items-center gap-2">
-                                                <i className="fas fa-map-marker-alt w-4 text-center"></i>
-                                                {exp.location}
-                                            </p>
-                                        </div>
+                                        <p className="font-medium text-roseTaupe">{exp.company}</p>
                                     </div>
-
-                                    {/* Right Column: Content */}
-                                    <div className="md:w-2/3">
-                                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                                            {exp.description}
-                                        </p>
-
-                                        {exp.highlights.length > 0 && (
-                                            <ul className="mb-6 space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                                                {exp.highlights.map((highlight, idx) => (
-                                                    <li key={idx} className="flex items-start gap-2">
-                                                        <i className="fas fa-angle-right text-mikadoYellow mt-1 shrink-0"></i>
-                                                        <span>{highlight}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        )}
-
-                                        {/* Skills pills */}
-                                        <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-100 dark:border-gray-800/50">
-                                            {exp.skills.map((skill, idx) => (
-                                                <span key={idx} className="text-xs font-semibold px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">
-                                                    {skill}
-                                                </span>
-                                            ))}
-                                        </div>
+                                    <div className="text-sm text-gray-500 dark:text-gray-400 sm:text-right">
+                                        <p>{exp.duration}</p>
+                                        <p>{exp.location}</p>
                                     </div>
-
                                 </div>
+                                <p className="mt-3 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                                    {exp.description}
+                                </p>
+
+                                <details className="mt-4 border-t border-gray-100 pt-3 dark:border-gray-800/50">
+                                    <summary className="cursor-pointer text-sm font-semibold text-roseTaupe hover:text-mikadoYellow dark:text-gray-300">
+                                        Role highlights and skills
+                                    </summary>
+                                    {exp.highlights.length > 0 && (
+                                        <ul className="mt-3 space-y-2 text-sm text-gray-600 dark:text-gray-400">
+                                            {exp.highlights.map((highlight, idx) => (
+                                                <li key={idx} className="flex items-start gap-2">
+                                                    <i className="fas fa-angle-right text-mikadoYellow mt-1 shrink-0"></i>
+                                                    <span>{highlight}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    )}
+                                    <div className="mt-3 flex flex-wrap gap-2">
+                                        {exp.skills.map((skill, idx) => (
+                                            <span key={idx} className="text-xs font-semibold px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400">
+                                                {skill}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </details>
                             </div>
                         </motion.div>
                     ))}
