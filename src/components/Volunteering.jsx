@@ -141,6 +141,27 @@ const volunteerRoles = [
     }
 ];
 
+const impactActivities = [
+    { title: "Online Scam Awareness Workshop", detail: "Interactive scam awareness education using guided scenarios." },
+    { title: "Internet Security & Email Fundamentals", detail: "Accessible, hands-on guidance for safe internet and email use." },
+    { title: "Excel Basics Training", detail: "Practical spreadsheet exercises, formulas, and charts." },
+    { title: "One-on-One Student Mentoring", detail: "Individual support to build confidence with digital tools." },
+    { title: "Digital Literacy Programs", detail: "Inclusive technology education with Spastics Society of Karnataka." }
+];
+
+const excelTopics = [
+    "What is Excel",
+    "Rows, columns, and cells",
+    "Cell references",
+    "Formatting",
+    "SUM",
+    "AVERAGE",
+    "MAX",
+    "MIN",
+    "Charts",
+    "Practice exercises"
+];
+
 const Volunteering = () => {
     const [showAll, setShowAll] = useState(false);
     const featuredRole = volunteerRoles[0];
@@ -210,7 +231,7 @@ const Volunteering = () => {
                         <div>
                             <h4 className="font-semibold text-numberText dark:text-gray-200 mb-3">Excel Basics topics</h4>
                             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-600 dark:text-gray-400">
-                                {["What is Excel", "Rows, columns, and cells", "Cell references", "Basic formatting", "SUM, AVERAGE, MAX, MIN", "Guided practice exercises"].map((topic) => (
+                                {excelTopics.map((topic) => (
                                     <li key={topic} className="rounded-lg bg-gray-50 dark:bg-gray-800/70 px-3 py-2">{topic}</li>
                                 ))}
                             </ul>
@@ -222,6 +243,64 @@ const Volunteering = () => {
                         </div>
                     </div>
                 </article>
+
+                <section aria-labelledby="impact-timeline-title" className="max-w-5xl mx-auto mb-12">
+                    <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-6">
+                        <div>
+                            <h3 id="impact-timeline-title" className="text-xl font-bold text-numberText dark:text-white">IBM Impact Volunteer timeline</h3>
+                            <p className="mt-1 text-sm text-gray-600 dark:text-gray-400">Spastics Society of Karnataka · Sep 2025 – Present</p>
+                        </div>
+                        <span className="badge self-start sm:self-auto">Digital literacy &amp; education</span>
+                    </div>
+
+                    <ol className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {impactActivities.map((activity, index) => (
+                            <motion.li
+                                key={activity.title}
+                                className="card relative overflow-hidden p-5"
+                                initial={{ opacity: 0, y: 16 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-30px" }}
+                                transition={{ duration: 0.35, delay: index * 0.05 }}
+                            >
+                                <span className="mb-3 inline-flex h-8 w-8 items-center justify-center rounded-full bg-mikadoYellow/15 text-sm font-bold text-roseTaupe dark:text-mikadoYellow">
+                                    {String(index + 1).padStart(2, '0')}
+                                </span>
+                                <h4 className="font-bold text-numberText dark:text-white">{activity.title}</h4>
+                                <p className="mt-2 text-sm leading-relaxed text-gray-600 dark:text-gray-400">{activity.detail}</p>
+                            </motion.li>
+                        ))}
+                    </ol>
+                </section>
+
+                <section aria-labelledby="volunteer-gallery-title" className="max-w-5xl mx-auto mb-12">
+                    <h3 id="volunteer-gallery-title" className="text-xl font-bold text-numberText dark:text-white mb-5">Workshop gallery</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        {["Digital literacy workshop", "Guided Excel practice", "Student mentoring"].map((label) => (
+                            <div
+                                key={label}
+                                role="img"
+                                aria-label={`${label} photo placeholder`}
+                                className="flex aspect-[4/3] flex-col items-center justify-center gap-3 rounded-2xl border border-dashed border-gray-300 bg-gray-50/70 text-center text-sm text-gray-500 dark:border-gray-700 dark:bg-gray-900/50 dark:text-gray-400"
+                            >
+                                <i className="fas fa-image text-2xl text-roseTaupe/70 dark:text-gray-500" aria-hidden="true"></i>
+                                <span>{label}</span>
+                                <span className="text-xs">Photo placeholder</span>
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                <div className="max-w-5xl mx-auto mb-12">
+                    <h3 className="text-xl font-bold text-numberText dark:text-white mb-5">Volunteer achievements</h3>
+                    <div className="flex flex-wrap gap-3">
+                        {["Digital Literacy", "Online Safety", "Excel Basics", "Student Mentoring", "Accessible Learning"].map((achievement) => (
+                            <span key={achievement} className="badge">
+                                <i className="fas fa-award" aria-hidden="true"></i> {achievement}
+                            </span>
+                        ))}
+                    </div>
+                </div>
 
                 <h3 className="text-xl font-bold text-center text-numberText dark:text-white mb-6">Other community involvement</h3>
                 <div id="volunteering-activities" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

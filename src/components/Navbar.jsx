@@ -16,17 +16,20 @@ const Navbar = ({ theme, toggleTheme }) => {
             <div className="nav-container">
                 <div className="text-2xl font-bold text-mikadoYellow">MI.</div>
 
-                <div className="hidden md:flex items-center space-x-1 lg:space-x-4">
-                    <a href="#hero">Home</a>
-                    <a href="#about">About</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#journey">Journey</a>
-                    <a href="#volunteering">Volunteering</a>
-                    <a href="#current-focus">Focus</a>
-                    <a href="#resume">Resume</a>
-                    <a href="#contact">Contact</a>
+                <div className="nav-links hidden min-w-0 flex-1 items-center justify-start overflow-x-auto whitespace-nowrap px-4 md:flex">
+                    <a className="shrink-0" href="#hero">Home</a>
+                    <a className="shrink-0" href="#about">About</a>
+                    <a className="shrink-0" href="#experience">Experience</a>
+                    <a className="shrink-0" href="#skills">Skills</a>
+                    <a className="shrink-0" href="#certifications">Certifications</a>
+                    <a className="shrink-0" href="#engineering-principles">Principles</a>
+                    <a className="shrink-0" href="#projects">Projects</a>
+                    <a className="shrink-0" href="#architecture">Architecture</a>
+                    <a className="shrink-0" href="#journey">Journey</a>
+                    <a className="shrink-0" href="#volunteering">Volunteering</a>
+                    <a className="shrink-0" href="#current-focus">Focus</a>
+                    <a className="shrink-0" href="#resume">Resume</a>
+                    <a className="shrink-0" href="#contact">Contact</a>
                 </div>
 
                 <button

@@ -31,6 +31,27 @@ const projects = [
             "Automated healthcare claims checks, including Cals-versus-Python month-to-date validation."
         ],
         lessons: "Keeping validation rules explicit and outcomes readable helps make checks easier to review, operate, and adapt as business requirements change."
+    },
+    {
+        id: "teradata-snowflake-validation",
+        title: "Teradata → Snowflake Migration Validation",
+        summary: "A validation-first case study in reconciling migrated data and verifying business rules.",
+        challenge: "Establish confidence in migrated operational outputs while maintaining the business rules and reporting expectations that stakeholders rely on.",
+        approach: "Compared Teradata and Snowflake outputs, combining reconciliation checks with business-rule verification and stakeholder review.",
+        validationStrategy: "Use reconciliation testing to measure output parity, verify business rules, and review results with stakeholders before relying on migrated outputs.",
+        technologies: ["Teradata", "Snowflake", "SQL", "Data Reconciliation"],
+        results: [
+            "Achieved 98% output parity.",
+            "Verified business rules as part of migration validation.",
+            "Applied reconciliation testing and stakeholder review."
+        ],
+        lessons: "A parity percentage is one signal, not the whole acceptance decision. Business-rule checks and stakeholder review help put reconciliation results in operational context.",
+        kpis: [
+            { value: "98%", label: "Output parity" },
+            { value: "Rules", label: "Business-rule verification" },
+            { value: "Reconciled", label: "Reconciliation testing" },
+            { value: "Reviewed", label: "Stakeholder review" }
+        ]
     }
 ];
 
@@ -73,10 +94,25 @@ const Projects = () => {
                             <h3 className="text-2xl font-bold text-numberText dark:text-white mb-2">{project.title}</h3>
                             <p className="text-gray-600 dark:text-gray-400 mb-6">{project.summary}</p>
 
+                            {project.kpis && (
+                                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+                                    {project.kpis.map((kpi) => (
+                                        <div key={kpi.label} className="rounded-xl border border-mikadoYellow/20 bg-mikadoYellow/5 p-4 text-center dark:border-mikadoYellow/15 dark:bg-mikadoYellow/5">
+                                            <p className="text-lg font-bold text-roseTaupe dark:text-mikadoYellow">{kpi.value}</p>
+                                            <p className="mt-1 text-xs text-gray-600 dark:text-gray-400">{kpi.label}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                            )}
+
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <ProjectDetail label="Challenge">{project.challenge}</ProjectDetail>
-                                <ProjectDetail label="Architecture">{project.architecture}</ProjectDetail>
-                                <ProjectDetail label="Implementation">{project.implementation}</ProjectDetail>
+                                <ProjectDetail label={project.approach ? "Approach" : "Architecture"}>
+                                    {project.approach || project.architecture}
+                                </ProjectDetail>
+                                <ProjectDetail label={project.validationStrategy ? "Validation strategy" : "Implementation"}>
+                                    {project.validationStrategy || project.implementation}
+                                </ProjectDetail>
                                 <div>
                                     <h4 className="font-semibold text-numberText dark:text-gray-200 mb-2">Technologies</h4>
                                     <div className="flex flex-wrap gap-2">
