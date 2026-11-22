@@ -16,7 +16,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             <div className="nav-container">
                 <div className="text-2xl font-bold text-mikadoYellow">MI.</div>
 
-                <div className="hidden md:flex items-center space-x-2 lg:space-x-8">
+                <div className="hidden md:flex items-center space-x-1 lg:space-x-4">
                     <a href="#hero">Home</a>
                     <a href="#about">About</a>
                     <a href="#experience">Experience</a>
@@ -24,6 +24,8 @@ const Navbar = ({ theme, toggleTheme }) => {
                     <a href="#projects">Projects</a>
                     <a href="#journey">Journey</a>
                     <a href="#volunteering">Volunteering</a>
+                    <a href="#current-focus">Focus</a>
+                    <a href="#resume">Resume</a>
                     <a href="#contact">Contact</a>
                 </div>
 

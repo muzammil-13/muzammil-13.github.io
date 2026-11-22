@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Impact from './components/Impact';
 import About from './components/About';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Journey from './components/Journey';
 import Volunteering from './components/Volunteering';
-import Community from './components/Community';
+import FocusAndFit from './components/FocusAndFit';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -40,13 +41,14 @@ function App() {
             <Navbar theme={theme} toggleTheme={toggleTheme} />
             <main>
                 <Hero />
+                <Impact />
                 <About />
                 <Experience />
                 <Skills />
                 <Projects />
                 <Journey />
                 <Volunteering />
-                <Community />
+                <FocusAndFit />
                 <Contact />
             </main>
             <Footer />

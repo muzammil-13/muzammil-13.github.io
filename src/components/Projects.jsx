@@ -1,137 +1,112 @@
-import React from 'react';
 import { motion } from 'framer-motion';
 
-const projectsList = [
+const projects = [
     {
-        title: "ExamInsights.ai",
-        description: "ExamInsight is a RAG application designed to analyze previous exam question papers and identify common question patterns. This tool aims to help students prepare more effectively for their exams.",
-        link: "https://github.com/muzammil-13/ExamInsights_app",
-        tags: ["Streamlit", "RAG", "LLM", "Python"],
-        span: "col-span-1 md:col-span-2 lg:col-span-2 row-span-2", // Large Featured
-        delay: 0.1,
-        featured: true,
-        icon: "fa-brain"
+        id: "zentinel-agent",
+        title: "Zentinel Agent",
+        summary: "Mainframe job monitoring modernized from TN3270/GETRC interactions to z/OSMF REST APIs.",
+        challenge: "The existing monitoring workflow relied on a TN3270/GETRC architecture and took 2–4 minutes per monitoring cycle. Modernization needed to make monitoring faster while preserving expected outputs.",
+        architecture: "Replaced the TN3270/GETRC interaction path with z/OSMF REST APIs. The resulting workflow connects job monitoring with spool analysis, anomaly detection, and notifications.",
+        implementation: "Built and validated monitoring, spool analysis, anomaly detection, and notification workflows. Supported z/OSMF capability implementation in Devin UEP.",
+        technologies: ["z/OSMF REST APIs", "z/OS", "TN3270 / GETRC", "Mainframe batch operations"],
+        results: [
+            "Reduced monitoring cycle time from 2–4 minutes to 2–15 seconds.",
+            "Achieved 7/7 output parity.",
+            "Completed 10+ validation runs and validated 137+ mainframe jobs.",
+            "Received leadership recognition."
+        ],
+        lessons: "Modernizing an established operations workflow requires more than replacing an interface: output parity and repeatable validation are essential to building confidence in the new path."
     },
     {
-        title: "AirBnB Clone",
-        description: "A full-stack clone of AirBnB built using the MERN stack. Features user authentication, property listings, and booking management.",
-        link: "https://github.com/muzammil-13/airbnb-clone",
-        tags: ["React", "Node.js", "MongoDB"],
-        span: "col-span-1 md:col-span-1 lg:col-span-1 row-span-2", // Tall Featured
-        delay: 0.2,
-        featured: true,
-        icon: "fa-house-user"
-    },
-    {
-        title: "Retail Ops Tools",
-        description: "MVP automating retail operations for family business. Streamlines inventory management and order processing.",
-        link: "https://github.com/muzammil-13",
-        tags: ["Python", "Automation", "ERP"],
-        span: "col-span-1 md:col-span-1 lg:col-span-1 row-span-1",
-        delay: 0.3,
-        featured: false,
-        icon: "fa-cash-register"
-    },
-    {
-        title: "Airbnb Support Bot",
-        description: "An intelligent chatbot built with Next.js, React, and OpenAI API to provide instant support assistance.",
-        link: "https://github.com/muzammil-13/airbnb-bot",
-        tags: ["Next.js", "React", "OpenAI"],
-        span: "col-span-1 md:col-span-2 lg:col-span-1 row-span-1",
-        delay: 0.4,
-        featured: false,
-        icon: "fa-robot"
-    },
-    {
-        title: "Bitcoin Predictor",
-        description: "A data-driven project leveraging machine learning to predict Bitcoin 30-day price trends.",
-        link: "https://github.com/muzammil-13/data_analysis-inmakes",
-        tags: ["Machine Learning", "Data Analysis"],
-        span: "col-span-1 md:col-span-1 lg:col-span-1 row-span-1",
-        delay: 0.5,
-        featured: false,
-        icon: "fa-chart-line"
+        id: "operational-data-validator",
+        title: "Operational Data Validator",
+        summary: "A productionized, YAML-driven validation framework for healthcare claims data.",
+        challenge: "Healthcare claims validation requires applying business rules and comparing operational data consistently. The task was to turn those checks into reusable automation with clear outcomes.",
+        architecture: "Validation rules are defined in YAML and evaluated by a Python framework. Results use explicit PASS, WARN, and FAIL states to communicate validation outcomes.",
+        implementation: "Created automated healthcare claims validation and a Cals-versus-Python month-to-date data validator, using rule-driven checks to compare and assess operational data.",
+        technologies: ["Python", "YAML", "Healthcare claims data", "Cals vs Python MTD validation"],
+        results: [
+            "Delivered a productionized, configuration-driven validation framework.",
+            "Standardized validation outcomes as PASS, WARN, or FAIL.",
+            "Automated healthcare claims checks, including Cals-versus-Python month-to-date validation."
+        ],
+        lessons: "Keeping validation rules explicit and outcomes readable helps make checks easier to review, operate, and adapt as business requirements change."
     }
 ];
+
+const ProjectDetail = ({ label, children }) => (
+    <div>
+        <h4 className="font-semibold text-numberText dark:text-gray-200 mb-1">{label}</h4>
+        <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{children}</p>
+    </div>
+);
 
 const Projects = () => {
     return (
         <section id="projects" className="py-24 relative overflow-hidden">
-            {/* Decals */}
             <div className="absolute top-1/4 -left-64 w-96 h-96 bg-mikadoYellow/5 rounded-full blur-3xl -z-10"></div>
-
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.h2
-                    className="section-title text-center mb-16"
+                    className="section-title text-center mb-4"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    🚀 <span className="gradient-text">Featured</span> Projects
+                    Selected Enterprise Work
                 </motion.h2>
+                <p className="text-center text-gray-600 dark:text-gray-400 mb-16 max-w-3xl mx-auto">
+                    Case studies in mainframe modernization and validation-first data operations.
+                </p>
 
-                {/* Bento Grid layout */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(200px,auto)]">
-                    {projectsList.map((project, index) => (
-                        <motion.div
-                            key={index}
-                            className={`card group hover:border-mikadoYellow/30 flex flex-col justify-between relative overflow-hidden ${project.span}`}
-                            initial={{ opacity: 0, y: 30 }}
+                <div className="space-y-8 max-w-5xl mx-auto">
+                    {projects.map((project, index) => (
+                        <motion.article
+                            id={project.id}
+                            key={project.id}
+                            className="card"
+                            initial={{ opacity: 0, y: 24 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.5, delay: project.delay }}
-                            whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
-                            {/* Hover Gradient */}
-                            <div className="absolute inset-0 bg-gradient-to-tr from-mikadoYellow/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                            <h3 className="text-2xl font-bold text-numberText dark:text-white mb-2">{project.title}</h3>
+                            <p className="text-gray-600 dark:text-gray-400 mb-6">{project.summary}</p>
 
-                            <div className="relative z-10 h-full flex flex-col">
-
-                                <div className="flex justify-between items-start mb-6">
-                                    <div className={`w-12 h-12 rounded-xl flex items-center justify-center shadow-sm transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3 ${project.featured ? 'bg-mikadoYellow/10 text-mikadoYellow dark:bg-mikadoYellow/20' : 'bg-gray-100 text-gray-500 dark:bg-gray-800'}`}>
-                                        <i className={`fas ${project.icon} text-xl`}></i>
-                                    </div>
-                                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-mikadoYellow transition-colors" aria-label="Github link">
-                                        <i className="fab fa-github text-2xl"></i>
-                                    </a>
-                                </div>
-
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <ProjectDetail label="Challenge">{project.challenge}</ProjectDetail>
+                                <ProjectDetail label="Architecture">{project.architecture}</ProjectDetail>
+                                <ProjectDetail label="Implementation">{project.implementation}</ProjectDetail>
                                 <div>
-                                    <h3 className={`font-bold mb-3 group-hover:text-mikadoYellow transition-colors ${project.featured ? 'text-2xl text-numberText dark:text-white' : 'text-xl text-gray-800 dark:text-gray-200'}`}>
-                                        {project.title}
-                                    </h3>
-                                    <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-                                        {project.description}
-                                    </p>
-                                </div>
-
-                                <div className="mt-auto">
-                                    <div className="flex flex-wrap gap-2 pt-4 border-t border-gray-100 dark:border-gray-800/50">
-                                        {project.tags.map((tag, tagIndex) => (
-                                            <span key={tagIndex} className="text-xs font-semibold px-2.5 py-1 rounded-md bg-gray-50 text-gray-600 dark:bg-gray-800/80 dark:text-gray-400 border border-gray-100 dark:border-gray-700">
-                                                {tag}
-                                            </span>
+                                    <h4 className="font-semibold text-numberText dark:text-gray-200 mb-2">Technologies</h4>
+                                    <div className="flex flex-wrap gap-2">
+                                        {project.technologies.map((technology) => (
+                                            <span key={technology} className="badge">{technology}</span>
                                         ))}
                                     </div>
                                 </div>
-
+                                <div>
+                                    <h4 className="font-semibold text-numberText dark:text-gray-200 mb-2">Results</h4>
+                                    <ul className="space-y-1.5 text-sm text-gray-600 dark:text-gray-400">
+                                        {project.results.map((result) => (
+                                            <li key={result} className="flex items-start gap-2">
+                                                <i className="fas fa-check text-mikadoYellow mt-1 shrink-0"></i>
+                                                <span>{result}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                                <ProjectDetail label="Lessons learned">{project.lessons}</ProjectDetail>
                             </div>
-                        </motion.div>
+                        </motion.article>
                     ))}
                 </div>
 
-                <motion.div
-                    className="text-center mt-16"
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.6, duration: 0.5 }}
-                >
-                    <a href="https://github.com/muzammil-13?tab=repositories" target="_blank" rel="noopener noreferrer" className="btn-secondary group">
-                        <i className="fab fa-github mr-2 group-hover:animate-bounce"></i> Browse All Repositories
+                <div className="text-center mt-12">
+                    <a href="https://github.com/muzammil-13?tab=repositories" target="_blank" rel="noopener noreferrer" className="btn-secondary">
+                        <i className="fab fa-github mr-2"></i> View GitHub repositories
                     </a>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

@@ -12,7 +12,7 @@ const Contact = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    📫 Get In Touch
+                    Contact
                 </motion.h2>
 
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mt-12">
@@ -26,25 +26,16 @@ const Contact = () => {
                         transition={{ duration: 0.6 }}
                     >
                         <div>
-                            <h3 className="text-2xl font-bold mb-6 text-numberText dark:text-white">Connect With Me</h3>
+                            <h3 className="text-2xl font-bold mb-4 text-numberText dark:text-white">Let’s talk about enterprise engineering</h3>
+                            <p className="text-gray-600 dark:text-gray-400 mb-6">
+                                I’m interested in opportunities involving DataOps, enterprise automation, mainframe modernization, and applied AI implementation.
+                            </p>
                             <div className="flex flex-wrap gap-4">
-                                <a href="https://linkedin.com/in/muzammil-ibrahim-pm" target="_blank" rel="noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-roseTaupe/10 dark:bg-gray-800 text-numberText dark:text-white hover:text-mikadoYellow dark:hover:text-mikadoYellow hover:-translate-y-1 transition-all text-xl">
+                                <a href="https://www.linkedin.com/in/muzammilipm" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="w-12 h-12 flex items-center justify-center rounded-full bg-roseTaupe/10 dark:bg-gray-800 text-numberText dark:text-white hover:text-mikadoYellow dark:hover:text-mikadoYellow hover:-translate-y-1 transition-all text-xl">
                                     <i className="fab fa-linkedin"></i>
                                 </a>
-                                <a href="https://github.com/muzammil-13" target="_blank" rel="noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-roseTaupe/10 dark:bg-gray-800 text-numberText dark:text-white hover:text-mikadoYellow dark:hover:text-mikadoYellow hover:-translate-y-1 transition-all text-xl">
+                                <a href="https://github.com/muzammil-13" target="_blank" rel="noreferrer" aria-label="GitHub" className="w-12 h-12 flex items-center justify-center rounded-full bg-roseTaupe/10 dark:bg-gray-800 text-numberText dark:text-white hover:text-mikadoYellow dark:hover:text-mikadoYellow hover:-translate-y-1 transition-all text-xl">
                                     <i className="fab fa-github"></i>
-                                </a>
-                                <a href="https://instagram.com/_mzml13" target="_blank" rel="noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-roseTaupe/10 dark:bg-gray-800 text-numberText dark:text-white hover:text-mikadoYellow dark:hover:text-mikadoYellow hover:-translate-y-1 transition-all text-xl">
-                                    <i className="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://x.com/_muzammil13" target="_blank" rel="noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-roseTaupe/10 dark:bg-gray-800 text-numberText dark:text-white hover:text-mikadoYellow dark:hover:text-mikadoYellow hover:-translate-y-1 transition-all text-xl">
-                                    <i className="fab fa-twitter"></i>
-                                </a>
-                                <a href="https://medium.com/@muzammilibrahim13" target="_blank" rel="noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-roseTaupe/10 dark:bg-gray-800 text-numberText dark:text-white hover:text-mikadoYellow dark:hover:text-mikadoYellow hover:-translate-y-1 transition-all text-xl">
-                                    <i className="fab fa-medium"></i>
-                                </a>
-                                <a href="https://discord.gg/739813212022767627" target="_blank" rel="noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-roseTaupe/10 dark:bg-gray-800 text-numberText dark:text-white hover:text-mikadoYellow dark:hover:text-mikadoYellow hover:-translate-y-1 transition-all text-xl">
-                                    <i className="fab fa-discord"></i>
                                 </a>
                             </div>
                         </div>
@@ -58,9 +49,6 @@ const Contact = () => {
                             </p>
                         </div>
 
-                        <a href="https://buymeacoffee.com/muzammil_13" target="_blank" rel="noreferrer" className="btn-primary inline-flex items-center gap-2">
-                            <i className="fas fa-coffee"></i> Buy Me A Coffee
-                        </a>
                     </motion.div>
 
                     {/* Contact Form */}

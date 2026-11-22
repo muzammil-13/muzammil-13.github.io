@@ -1,12 +1,12 @@
-import React from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const volunteerRoles = [
     {
         title: "IBM Impact Volunteer",
         org: "IBM",
-        duration: "Sep 2025 - Present",
-        category: "Social Services",
+        duration: "Sep 2025 – Present",
+        category: "Digital Literacy & Education",
         description: "Empowering neurodiverse students at the Spastics Society of Karnataka through digital literacy and life skills.",
         highlights: [
             "Gamified 'Scams Awareness' education using role-play to avoid online frauds.",
@@ -15,6 +15,33 @@ const volunteerRoles = [
             "Participated in an IBM environmental sustainability Tree Plantation Drive."
         ],
         icon: "fa-hands-helping"
+    },
+    {
+        title: "GCP Member",
+        org: "Google Cloud Skills Boost",
+        duration: "Jan 2023 - Present",
+        category: "Science & Technology",
+        description: "Active member continuously upskilling and participating in Google Cloud initiatives.",
+        highlights: [],
+        icon: "fa-cloud"
+    },
+    {
+        title: "GDG Member",
+        org: "Google Developers Group",
+        duration: "Jul 2021 - Present",
+        category: "Science & Technology",
+        description: "Long-standing member of the Google Developers Group, participating in various community tech events.",
+        highlights: [],
+        icon: "fa-code"
+    },
+    {
+        title: "H2S Innovator",
+        org: "Hack2skill",
+        duration: "2024",
+        category: "Science & Technology",
+        description: "Participated in the AI for Impact 2024 APAC Hackathon, focusing on building socially impactful AI solutions.",
+        highlights: [],
+        icon: "fa-robot"
     },
     {
         title: "muLearner",
@@ -39,33 +66,6 @@ const volunteerRoles = [
             "Mentoring 10+ students on career paths and upskilling."
         ],
         icon: "fa-users"
-    },
-    {
-        title: "H2S Innovator",
-        org: "Hack2skill",
-        duration: "2024",
-        category: "Science & Technology",
-        description: "Participated in the AI for Impact 2024 APAC Hackathon, focusing on building socially impactful AI solutions.",
-        highlights: [],
-        icon: "fa-robot"
-    },
-    {
-        title: "GCP Member",
-        org: "Google Cloud Skills Boost",
-        duration: "Jan 2023 - Present",
-        category: "Science & Technology",
-        description: "Active member continuously upskilling and participating in Google Cloud initiatives.",
-        highlights: [],
-        icon: "fa-cloud"
-    },
-    {
-        title: "GDG Member",
-        org: "Google Developers Group",
-        duration: "Jul 2021 - Present",
-        category: "Science & Technology",
-        description: "Long-standing member of the Google Developers Group, participating in various community tech events.",
-        highlights: [],
-        icon: "fa-code"
     },
     {
         title: "Innovator",
@@ -142,6 +142,11 @@ const volunteerRoles = [
 ];
 
 const Volunteering = () => {
+    const [showAll, setShowAll] = useState(false);
+    const featuredRole = volunteerRoles[0];
+    const otherRoles = volunteerRoles.slice(1);
+    const visibleRoles = showAll ? otherRoles : otherRoles.slice(0, 2);
+
     return (
         <section id="volunteering" className="py-24 relative overflow-hidden bg-white dark:bg-black">
             {/* Decals */}
@@ -155,16 +160,74 @@ const Volunteering = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <h2 className="section-title mb-4">🤝 Volunteering & Impact</h2>
+                    <h2 className="section-title mb-4">Community Impact</h2>
                     <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
-                        Giving back to the community through education, open-source, and social service.
+                        Beyond engineering, I contribute to technology accessibility and digital literacy initiatives through IBM Impact volunteering programs. I enjoy simplifying complex technical concepts and creating inclusive learning experiences that help individuals build confidence with technology.
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {volunteerRoles.map((role, index) => (
+                <article className="card max-w-5xl mx-auto mb-10">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-6">
+                        <div>
+                            <p className="text-sm font-semibold text-roseTaupe dark:text-mikadoYellow">{featuredRole.org} · {featuredRole.duration}</p>
+                            <h3 className="text-2xl font-bold text-numberText dark:text-white mt-1">{featuredRole.title}</h3>
+                            <p className="text-gray-600 dark:text-gray-400 mt-1">Organization: Spastics Society of Karnataka</p>
+                        </div>
+                        <span className="badge self-start">{featuredRole.category}</span>
+                    </div>
+
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                        Participate in IBM Impact initiatives focused on digital literacy, internet safety, and technology education for neurodiverse students.
+                    </p>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 className="font-semibold text-numberText dark:text-gray-200 mb-3">Learning experiences designed and delivered</h4>
+                            <ul className="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+                                <li className="flex items-start gap-2">
+                                    <i className="fas fa-check text-mikadoYellow mt-1"></i>
+                                    <span>Designed and delivered a gamified Online Scam Awareness workshop using role-play to help students identify and avoid common digital fraud scenarios.</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <i className="fas fa-check text-mikadoYellow mt-1"></i>
+                                    <span>Redesigned Internet Security &amp; Email Fundamentals materials with accessibility-focused, hands-on teaching methods.</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <i className="fas fa-check text-mikadoYellow mt-1"></i>
+                                    <span>Developed and delivered an Excel Basics training session with guided practice, interactive spreadsheet exercises, and simple charting activities to improve engagement and practical learning outcomes.</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <i className="fas fa-check text-mikadoYellow mt-1"></i>
+                                    <span>Provided one-on-one mentoring to help students build confidence using digital tools and technology.</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <i className="fas fa-check text-mikadoYellow mt-1"></i>
+                                    <span>Participated in IBM community service and environmental volunteering initiatives.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 className="font-semibold text-numberText dark:text-gray-200 mb-3">Excel Basics topics</h4>
+                            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-gray-600 dark:text-gray-400">
+                                {["What is Excel", "Rows, columns, and cells", "Cell references", "Basic formatting", "SUM, AVERAGE, MAX, MIN", "Guided practice exercises"].map((topic) => (
+                                    <li key={topic} className="rounded-lg bg-gray-50 dark:bg-gray-800/70 px-3 py-2">{topic}</li>
+                                ))}
+                            </ul>
+                            <div className="flex flex-wrap gap-2 mt-5">
+                                {["Leadership", "Technical communication", "Accessibility-focused design", "Technical education", "Mentorship", "Community impact"].map((skill) => (
+                                    <span key={skill} className="badge">{skill}</span>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <h3 className="text-xl font-bold text-center text-numberText dark:text-white mb-6">Other community involvement</h3>
+                <div id="volunteering-activities" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {visibleRoles.map((role, index) => (
                         <motion.div
-                            key={index}
+                            key={`${role.org}-${role.title}`}
                             className="card group hover:border-mikadoYellow/30 flex flex-col relative z-10 bg-white/50 dark:bg-cardBgDark/50 backdrop-blur-sm"
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
@@ -206,6 +269,17 @@ const Volunteering = () => {
                             )}
                         </motion.div>
                     ))}
+                </div>
+                <div className="text-center mt-8">
+                    <button
+                        type="button"
+                        className="btn-secondary"
+                        aria-expanded={showAll}
+                        aria-controls="volunteering-activities"
+                        onClick={() => setShowAll(!showAll)}
+                    >
+                        {showAll ? 'Show less' : 'Read more'}
+                    </button>
                 </div>
             </div>
         </section>

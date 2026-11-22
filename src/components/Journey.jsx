@@ -1,77 +1,62 @@
-import React from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 const timelineEvents = [
     {
-        year: "2015–2020",
-        title: "⚙️ The Curious Tinkerer",
-        content: "Before the degrees and dev tools, I was just a tech-obsessed teenager. Flashing custom ROMs, fixing desktops, troubleshooting phones, and diving deep into docs, YouTube tutorials, and XDA forums—that was my bootcamp. Linux terminals, recovery modes, and optimization tricks were my playground."
+        year: "2025–Present",
+        title: "Enterprise DataOps & modernization",
+        content: "At IBM, I work in healthcare claims data operations, with a focus on Python automation, data validation and reconciliation, production support, and z/OS mainframe modernization."
     },
     {
-        year: "2020–2023",
-        title: "🎓 The Degree & Discovery",
-        content: (
-            <>
-                <p className="mb-2">I pursued my <strong>Bachelor of Computer Applications</strong> through storms—literally.</p>
-                <ul className="list-disc pl-5 space-y-1">
-                    <li>📚 First year: COVID lockdowns turned classrooms into browser tabs.</li>
-                    <li>🌊 Second year: flooded with academic pressure—exams, lab records, and uncertainty.</li>
-                    <li>💻 Third year: I got my first laptop—my gateway to exploring Linux admin, Android dev, and cloud computing.</li>
-                </ul>
-            </>
-        )
+        year: "Sep 2025–Present",
+        title: "IBM Impact Volunteer",
+        content: "Contribute to digital literacy, internet safety, and technology education for neurodiverse students through accessible workshops, practical learning materials, and one-on-one mentoring."
     },
     {
-        year: "2023",
-        title: "🐍 The Foundation Year",
-        content: "I kicked things off with a Python Full Stack internship—my first structured experience building both the frontend and backend of real-world apps."
-    },
-    {
-        year: "2024",
-        title: "⚡ The Launchpad",
-        content: (
-            <>
-                <p className="mb-2">I participated in <strong>IEEE Launchpad Kerala</strong>, where I learned:</p>
-                <ul className="list-disc pl-5 space-y-1">
-                    <li>Frontend fundamentals</li>
-                    <li>CTF Hackathon & Problem-solving in Coding</li>
-                    <li>Core engineering principles & Communication</li>
-                </ul>
-            </>
-        )
-    },
-    {
-        year: "2024",
-        title: "☁️ Cloud & Code",
-        content: "Later that year, I earned 5+ skill badges via the Google Cloud PCA Cohort, gaining practical experience with GCP services and infrastructure basics."
-    },
-    {
-        year: "2024",
-        title: "💼 Corporate Readiness",
-        content: "The EY GDS NextGen Emp Program helped me refine my MERN stack capabilities while building real teamwork and soft skills that are critical in the workplace."
+        year: "2024–2025",
+        title: "Business operations & IT",
+        content: "Worked across business operations and IT in a family-run business, supporting ERP invoicing, inventory workflows, payment tracking, hardware, and local networking."
     },
     {
         year: "2025",
-        title: "🚀 Sharpening the Blade",
-        content: "I completed 89% of The Odin Project's Web Foundations, solidifying my understanding of full-stack architecture through project-based learning."
+        title: "Project-based learning",
+        content: "Continued structured web development study through The Odin Project and explored MVP development, product thinking, and iteration through a learning community."
     },
     {
-        year: "2025–Present",
-        title: "🧠 The SaaS Mindset",
-        content: (
-            <>
-                <p className="mb-2">Now I'm part of <strong>Micro SaaSkool</strong>, focusing on:</p>
-                <ul className="list-disc pl-5 space-y-1">
-                    <li>MVP building & SaaS product thinking</li>
-                    <li>Iterating with user feedback</li>
-                    <li>Laying the groundwork for a meaningful tech product</li>
-                </ul>
-            </>
-        )
+        year: "2024",
+        title: "IEEE Launchpad Kerala",
+        content: "Participated in IEEE Launchpad Kerala, developing problem-solving, communication, and engineering fundamentals through technical activities."
+    },
+    {
+        year: "2024",
+        title: "Google Cloud learning",
+        content: "Completed Google Cloud cohort learning and earned skill badges while building familiarity with cloud services."
+    },
+    {
+        year: "2024",
+        title: "EY GDS NextGen Employability Program",
+        content: "Built teamwork and workplace communication skills while continuing to develop technical foundations."
+    },
+    {
+        year: "2023",
+        title: "Python full-stack internship",
+        content: "Gained structured experience building frontend and backend applications during a Python full-stack internship."
+    },
+    {
+        year: "2020–2023",
+        title: "Education & technical foundation",
+        content: "Completed a Bachelor of Computer Applications and developed a foundation in software, programming, and IT."
+    },
+    {
+        year: "2015–2020",
+        title: "Early technical exploration",
+        content: "Learned through hands-on device troubleshooting and Android communities, developing an early interest in how software and systems work."
     }
 ];
 
 const Journey = () => {
+    const [showAll, setShowAll] = useState(false);
+
     return (
         <section id="journey" className="py-20 bg-gray-50 dark:bg-black">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,7 +67,7 @@ const Journey = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    📚 My Learning Journey
+                    Career Journey
                 </motion.h2>
                 <motion.p
                     className="text-center text-gray-600 dark:text-gray-400 mb-16"
@@ -91,11 +76,11 @@ const Journey = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: 0.1 }}
                 >
-                    The path hasn't been linear—but it's been intentional.
+                    From business operations and IT to enterprise data operations and mainframe modernization.
                 </motion.p>
 
-                <div className="relative max-w-4xl mx-auto py-10 timeline">
-                    {timelineEvents.map((event, index) => {
+                <div id="journey-timeline" className="relative max-w-4xl mx-auto py-10 timeline">
+                    {timelineEvents.slice(0, showAll ? timelineEvents.length : 3).map((event, index) => {
                         const isEven = index % 2 !== 0; // 0-indexed, so 0 is "odd" visually
                         return (
                             <motion.div
@@ -128,6 +113,17 @@ const Journey = () => {
                             </motion.div>
                         );
                     })}
+                </div>
+                <div className="text-center">
+                    <button
+                        type="button"
+                        className="btn-secondary"
+                        aria-expanded={showAll}
+                        aria-controls="journey-timeline"
+                        onClick={() => setShowAll(!showAll)}
+                    >
+                        {showAll ? 'Show less' : 'Read more'}
+                    </button>
                 </div>
             </div>
         </section>
